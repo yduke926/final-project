@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import './App.css';
+import Login from './screens/login';
+import Register from './screens/register';
+import Header from './components/header';
+import Footer from './components/footer';
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header> */}
+        <Header />
         <h1 className="App-intro">
-          Here is where the front-end of our app will live
+        {/* Your main content will go here! */}
         </h1>
+
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/register' component={Register} />
+        <Footer />
       </div>
+      </Router>
     );
   }
 }
