@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif',;
+    background: lightgray;
+
+}
+.Menu{
+
+    margin-top: 35px;
+    margin-bottom:25px;
+    padding-right: 200px;
+    background: #981D31;
+
+
+}
+a{
+    display: inline;
+    
+}
+.dash{
+    display: flex;
+    align-content: left;
+
+}
+.welcome{
+    display: flex;
+    float: left;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.card{
+    display: flex;
+    margin-left: 35%;
+    margin-bottom: 2%;
+    width: 33%;
+    height: 33%;
+    padding: 0 15px 15px;
+    background:#fff;
+    border-radius: 5px;
+}
+.card-two{
+    width: 100%;
+    padding: 20px 15px 25px;
+    background:#fff;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+.user-name{
+    font-size: 20px;
+    color: #981D31;
+    display: block;
+    text-align: center;
+}
+.title{
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.specialty {
+    font-size: 14px;
+    display: block;
+    text-align: left;
+}
+

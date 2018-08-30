@@ -6,6 +6,8 @@ import Login from './screens/login';
 import Register from './screens/register';
 import Header from './components/header';
 import Footer from './components/footer';
+import Student from './screens/Studentdash';
+import Admin from './screens/Admin';
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
 
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
+        <Route exact path='/student' component={Student}/>
+        <Route exact path='/admin' component={Admin}/>
         <Footer />
       </div>
       </Router>
