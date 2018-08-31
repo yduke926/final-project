@@ -6,6 +6,7 @@ import Login from './screens/login';
 import Register from './screens/register';
 import Header from './components/header';
 import Footer from './components/footer';
+import Home from './screens/home';
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
         <h1 className="App-intro">
         {/* Your main content will go here! */}
         </h1>
-
+      
+        <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
         <Footer />
