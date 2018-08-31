@@ -4,16 +4,48 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 62.5%;
   font-weight: 200;
+  background-image: url("https://s3.amazonaws.com/meditrack/MGbackgroundpic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color:lightgray;
   height: 100%;
   width: 100%;
   display: table
 }
+.home-container{
+  width: 65%;
+  height: 80%;
+  background-color: white;
+  opacity: .85;
+  align-items: center;
+  margin: auto;
+  margin-top: 5%;
+  border: 2px white;
+  border-radius: 20px;
 
+}
+.home-logo img{
+  height: 60%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 50px;
+}
 
+.signin-container{
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  height: 400px;
+  margin-top: 10%;
+  opacity: 0.75;
+  border: 2px white;
+  border-radius: 20px;
+}
 .signin-form{
   width: 400px;
-  padding-top: 100px;
+  padding-top: 30px;
   font-size: 1.2em;
   margin: 0 auto;
   text-align: left;
@@ -31,14 +63,27 @@ body {
   transition-duration: .4s;
   text-decoration: none;
 }
+
+/* registration page styling */
+
 .registration-form{
   width: 400px;
-  padding-top: 100px;
+  padding-top: 30px;
   font-size: 1.2em;
   margin: 0 auto;
   text-align: left;
   color: black;
   min-height: 650px;
+}
+.registration-container{
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  height: 480px;
+  margin-top: 10%;
+  opacity: 0.75;
+  border: 2px white;
+  border-radius: 20px;
 }
 .registration-form a{
   color: black;
@@ -65,7 +110,7 @@ body {
   background-color:darkgray;
   text-decoration: none;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 30%;
   bottom: 0;
 }
 .footer-nav{
@@ -92,16 +137,12 @@ footer ul li{
   border-radius: 50%;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.5;
   text-decoration: none;
   background-color: white;
 }
 
-/* Set a specific color for each brand */
-
-/* Facebook */
 .fa-facebook {
   background: black;
   color: white;
@@ -135,8 +176,8 @@ footer a{
   font-size: .7em;
 }
 .my-nav .dropdown-menu{
-  background-color: lightcoral;
-  opacity: .95;
+  background-color: lightgray;
+  opacity: .8;
 }
 
 .custom-toggler .navbar-toggler{
@@ -153,7 +194,7 @@ footer a{
 }
 
 a{
-  font-size: 1.6em;
+  font-size: 2.5em;
   line-height: normal;
   color: black;
   text-decoration: none;
