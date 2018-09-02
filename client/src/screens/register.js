@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
 
 class Register extends Component {
+    state = {}
+
+    setValue(e) {   
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    register() {
+        axios.post('/users/signup', this.state).then((res) => {
+            localStorage.setItem('token', res.data.token) 
+            window.location.pathname = '/home';
+        })
+    }
   render() {
     return (
         <div className="registration-container">
