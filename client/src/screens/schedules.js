@@ -19,7 +19,7 @@ class Schedules extends Component {
                     </nav>
                 </div>
                 <div>
-                <h1>Here is where the Admin will do CRUD operations for scheduling</h1>
+                <h1>Here is where the Admin will perform CRUD operations for scheduling</h1>
             </div>
             </div>
             

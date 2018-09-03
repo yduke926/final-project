@@ -16,7 +16,7 @@ class Report extends Component {
                         <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                     </nav> 
                 </div>
-                <h1>Here is we will build the report page</h1>
+                <h1>Here is we will build the reports page</h1>
            </div>
         )
     };
