@@ -4,56 +4,128 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 62.5%;
   font-weight: 200;
+  background-image: url("https://s3.amazonaws.com/meditrack/MGbackgroundpic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color:lightgray;
   height: 100%;
   width: 100%;
   display: table
 }
+.home-container{
+  width: 65%;
+  height: 80%;
+  background-color: white;
+  opacity: .85;
+  align-items: center;
+  margin: auto;
+  margin-top: 5%;
+  border: 2px white;
+  border-radius: 20px;
+  padding-bottom: 3em;
 
+}
+.home-logo img{
+  height: 60%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 50px;
+}
+.home-button{
+  margin-right: 10px;
+  border-color: #8e7a6f;
+  color: #8e7a6f
+}
+.home-button:hover{
+  background-color: #8e7a6f;
+  border-color: #8e7a6f
+}
+.home-button-2{
+  border-color: #8e7a6f;
+  color: #8e7a6f
+}
+.home-button-2:hover{
+  background-color: #8e7a6f;
+  border-color: #8e7a6f
+}
 
+.signin-container{
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  height: 400px;
+  margin-top: 10%;
+  opacity: 0.75;
+  border: 2px white;
+  border-radius: 20px;
+}
 .signin-form{
   width: 400px;
-  padding-top: 100px;
+  padding-top: 30px;
   font-size: 1.2em;
   margin: 0 auto;
   text-align: left;
-  color: black;
+  color: #8e7a6f;
   min-height: 650px;
 }
 .signin-form h1{
-  color: black;
+  color: #8e7a6f;
 }
 .signin-form a{
-  color: black;
+  color: #8e7a6f;
 }
 .signin-form a:hover{
-  color: rgb(168, 170, 161);
+  color: #cac3be;
   transition-duration: .4s;
   text-decoration: none;
 }
+.my-submit-btn{
+  background-color:#8e7a6f;
+}
+.my-submit-btn:hover{
+  background-color:#534740;
+}
+.exampleInputEmail1{
+  color: #8e7a6f;
+}
+.share-text{
+  color:#8e7a6f;
+}
+.my-form-border{
+border-color: #caae9f;
+}
+/* registration page styling */
+
 .registration-form{
   width: 400px;
-  padding-top: 100px;
+  padding-top: 30px;
   font-size: 1.2em;
   margin: 0 auto;
   text-align: left;
-  color: black;
+  color: #8e7a6f;
   min-height: 650px;
 }
-.registration-form a{
-  color: black;
+.registration-container{
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  height: 480px;
+  margin-top: 10%;
+  opacity: 0.75;
+  border: 2px white;
+  border-radius: 20px;
 }
 .registration-form a{
-  color: black;
+  color: #8e7a6f;
+}
+.registration-form a{
+  color: #8e7a6f;
 }
 .registration-form a:hover{
-  color: rgb(168, 170, 161);
-  transition-duration: .4s;
-  text-decoration: none;
-}
-.registration-form a:hover{
-  color: rgb(168, 170, 161);
-  transition-duration: .4s;
+  color: #cac3be;
+  transition-duration: .3s;
   text-decoration: none;
 }
 
@@ -61,19 +133,15 @@ body {
 
 .footer{
   font-size: 1em;
-  height: 80px;
-  background-color:darkgray;
+  height: 8em;
+  background-color: white;
   text-decoration: none;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 30%;
   bottom: 0;
 }
 .footer-nav{
-  height: 5px;
-  margin: auto;
-  padding-top: 10px;
-  line-height: 15px;
-  right: 15px;  
+  padding-top: 1%;
   margin-left: 70%;
   }
 footer ul li{
@@ -84,38 +152,34 @@ footer ul li{
 /* footer icons */
 .fa {
   padding: 10px;
-  font-size: 30px;
-  width: 50px;
+  font-size: 3em;
+  width: 1.7em;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 50%;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.5;
   text-decoration: none;
-  background-color: white;
+  background-color: rgb(78, 68, 68);
 }
 
-/* Set a specific color for each brand */
-
-/* Facebook */
 .fa-facebook {
-  background: black;
+  background: #8e7a6f;
   color: white;
 }
 .fa-twitter {
-  background: black;
+  background: #8e7a6f;
   color: white;
 }
 .fa-instagram {
-  background: black;
+  background: #8e7a6f;
   color: white;
 }
 .fa-github {
-  background: black;
+  background: #8e7a6f;
   color: white;
 }
 
@@ -132,30 +196,31 @@ footer a{
 
 .my-nav{
   background-color: white;
-  font-size: .7em;
+  font-size: .8em;
 }
 .my-nav .dropdown-menu{
-  background-color: lightcoral;
-  opacity: .95;
+  background-color: rgb(145, 117, 117);
+  opacity: .8;
 }
 
 .custom-toggler .navbar-toggler{
-  border-color: rgb(0,0,0);
+  border-color: rgb(78, 68, 68);
 }
 .custom-toggler .navbar-toggler-icon{
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(142,122,111, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .my-nav .dropdown-item{
   font-size: 1em;
+  color: white;
 }
 .my-nav .dropdown-item a{
   font-size: 1em;
 }
 
 a{
-  font-size: 1.6em;
+  font-size: 2.5em;
   line-height: normal;
-  color: black;
+  color: #8e7a6f;
   text-decoration: none;
   padding: 5px;
   font-family: 'Dosis', sans-serif;
