@@ -15,6 +15,7 @@ import Reports from './screens/reports';
 import Schedule from './screens/schedule';
 import Schedules from './screens/schedules';
 import Students from './screens/students';
+import Home from './screens/home';
 
 class App extends Component {
   render() {
@@ -25,7 +26,8 @@ class App extends Component {
         <h1 className="App-intro">
         {/* Your main content will go here! */}
         </h1>
-
+      
+        <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/student' component={Student}/>
