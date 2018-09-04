@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 // var axios = require("axios");
 
 class Login extends React.Component {
     
-    // state = {}
+    state = {}
 
-    // setValue(e) {   
-    //     this.setState({[e.target.name]: e.target.value})
-    // }
+    setValue(e) {   
+        this.setState({[e.target.name]: e.target.value})
+    }
 
-    // login() {
-    //     axios.post('/users/login', this.state).then((res) => {
-    //         localStorage.setItem('token', res.data.token) 
-    //         window.location.pathname = '/home';
-    //     })
-    // }
+    login() {
+        axios.post('/users/login', this.state).then((res) => {
+            localStorage.setItem('token', res.data.token) 
+            window.location.pathname = '/home';
+        })
+    }
 
   render() {
     return (
