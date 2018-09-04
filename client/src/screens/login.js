@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 // var axios = require("axios");
 
@@ -19,23 +19,25 @@ class Login extends React.Component {
 
   render() {
     return (
+        <div className="signin-container">
         <div className="signin-form">
 
             <h1>Log In</h1>
                 <form>
                     <div className="form-group">
                         <label className="exampleInputEmail1">Email address:</label>
-                        <input type="email" onChange={this.handleEmailChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
-                        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" onChange={this.handleEmailChange} className="form-control my-form-border" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required />
+                        
                     </div>
                     <div className="form-group">
                         <label className="exampleInputPassword1">Password</label>
-                        <input type="password" onChange={this.handlePasswordChange} className="form-control" id="exampleInputPassword1" placeholder="Password" required />
+                        <input type="password" onChange={this.handlePasswordChange} className="form-control my-form-border" id="exampleInputPassword1" placeholder="" required />
                     </div>
-                    <button type="submit" className="btn btn-secondary" onClick={this.signIn}>Submit</button>
+                    <button type="submit" className="btn my-submit-btn btn-secondary" onClick={this.signIn}>Submit</button>
                     </form>
                     <br></br>
                     <h6><Link to="Register">Register</Link></h6>
+    </div>
     </div>
     );
    }
