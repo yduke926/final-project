@@ -13,27 +13,26 @@ class Header extends Component {
      <div className="collapse navbar-collapse" id="navbarNavDropdown">
          <ul className="navbar-nav">
       <li className="nav-item">
-        <a className="nav-link" href="Login">Dashboard</a>
+        <a className="nav-link" href="admin">Admin</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="student">Dashboard</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="Login">Login</a>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="Register">Registration</a>
+      <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Student Resources
+        </a>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a className="dropdown-item"  href="#">Schedule</a>
+          <a className="dropdown-item"  href="#">Report</a>
+          <a className="dropdown-item"  href="#">FAQ</a>
+        </div>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Log Out</a>
-      </li>
-      <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown Menu
-        </a>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a className="dropdown-item"  href="#">One</a>
-          <a className="dropdown-item"  href="#">Two</a>
-          <a className="dropdown-item"  href="#">Three</a>
-          <a className="dropdown-item"  href="#">Four</a>
-        </div>
       </li>
     </ul>
   </div> 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import axios from 'axios';
 
 class Register extends Component {
@@ -38,7 +37,7 @@ class Register extends Component {
                     <button type="submit" className="btn my-submit-btn btn-secondary">Submit</button>
                     </form>
                     <br></br>
-                    <h6><Link to="LogIn">Log In</Link></h6>
+                    <h6><a href="LogIn">Log In</a></h6>
     </div>
     </div>
     );
