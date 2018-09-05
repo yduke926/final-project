@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+.notifications{
+    display: inline-block;
+    position: relative;
+    background: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    top: -20px;
+    right: 25px;
+}
