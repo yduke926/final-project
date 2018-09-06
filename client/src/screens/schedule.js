@@ -16,8 +16,43 @@ class Schedule extends Component {
                         <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                     </nav> 
                 </div>
-                <h1>Here is we will build the student's schedule page</h1>
-           </div>
+                {/* schedule reporting form */}
+                <h3>Please use the following form for submission of completed student hours:</h3><br></br><br></br>
+                <form>
+                    <div className="report-form-container">
+                        <div className="form-group">
+                            <label for="exampleFormControlInput1">Student Name:</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" required />
+                        </div>
+                        <div className="form-group">
+                            <label for="exampleFormControlInput1">Email address:</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" required />
+                        </div>
+                        <div className="form-group">
+                            <label for="exampleFormControlSelect1">Select Year:</label>
+                            <select className="form-control" id="exampleFormControlSelect1" required >
+                            <option>M3</option>
+                            <option>M4</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label for="exampleFormControlSelect2">Specialty:</label>
+                            <select multiple className="form-control" id="exampleFormControlSelect2" required >
+                            <option>Obstetrics</option>
+                            <option>Pediatrics</option>
+                            <option>Surgery</option>
+                            <option>Family Medicine</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label for="exampleFormControlInput1">Hours Completed:</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" required />
+                        </div>
+                    </div>
+                </form>
+                <button type="button" className="btn btn-secondary">Submit</button>
+             </div>
+           
             
         )
     };

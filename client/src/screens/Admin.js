@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import styles from '../admin.css';
 
 class Admin extends Component {
@@ -14,7 +13,7 @@ class Admin extends Component {
                     </div>
                 <div className="Menu">
                     <nav>
-                        <a href="#" class="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
+                        <a href="/admin" class="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
                         <a href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
                         <a href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
                         <a href="/messages"><i className="fa fa-envelope"aria-hidden="true"></i></a>
