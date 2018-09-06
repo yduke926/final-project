@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import axios from 'axios';
-
-
-render ();
-{
-    return (
-        <div>
-            <h1>Student Name</h1>
-        </div>
-    )
-};
-=======
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import styles from '../student.css';
@@ -68,4 +54,3 @@ class Student extends Component {
 
 
 export default Student;
->>>>>>> master

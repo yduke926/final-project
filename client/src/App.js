@@ -6,8 +6,6 @@ import Login from './screens/login';
 import Register from './screens/register';
 import Header from './components/header';
 import Footer from './components/footer';
-<<<<<<< HEAD
-=======
 import Student from './screens/Studentdash';
 import Admin from './screens/Admin';
 import Help from './screens/help';
@@ -17,7 +15,6 @@ import Reports from './screens/reports';
 import Schedule from './screens/schedule';
 import Schedules from './screens/schedules';
 import Students from './screens/students';
->>>>>>> master
 import Home from './screens/home';
 
 class App extends Component {
