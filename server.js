@@ -1,5 +1,7 @@
 // module imports
 const express = require('express');
+var mongoose = require('mongoose');
+var dotenv = require('dotenv').config()
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -12,7 +14,11 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
-
+//mlab connection
+mongoose.connect(process.env.db_url,function(err){
+    if(err) return console.log(err)
+      console.log("Connected to mLab DB")
+  });
 // PRODUCTION ONLY
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));

@@ -4,13 +4,15 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 62.5%;
   font-weight: 200;
-  background-image: url("https://s3.amazonaws.com/meditrack/MGbackgroundpic.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color:lightgray;
   height: 100%;
   width: 100%;
   display: table
+}
+.bg-img-container{
+  background-image: url("https://s3.amazonaws.com/meditrack/MGbackgroundpic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .home-container{
   width: 65%;
@@ -186,6 +188,9 @@ footer ul li{
 footer a{
   padding: 0;
 }
+footer a:hover{
+  color: white;
+}
 
 /* navbar styling  */
 .my-nav img{
@@ -198,6 +203,7 @@ footer a{
   background-color: white;
   font-size: .8em;
 }
+
 .my-nav .dropdown-menu{
   background-color: rgb(145, 117, 117);
   opacity: .8;
@@ -217,7 +223,7 @@ footer a{
   font-size: 1em;
 }
 
-a{
+.my-nav a{
   font-size: 2.5em;
   line-height: normal;
   color: #8e7a6f;
@@ -225,8 +231,19 @@ a{
   padding: 5px;
   font-family: 'Dosis', sans-serif;
 }
-a:hover {
+ .my-nav a:hover {
   color: rgb(168, 170, 161);
   transition-duration: .3s;
   text-decoration: none;
 }
+
+.report-form-container{
+  width:70%;
+  margin: auto;
+  text-align: left;
+  font-size: 1.7em;
+  }
+
+  .jumbotron{
+    background-color: lightgray
+  }

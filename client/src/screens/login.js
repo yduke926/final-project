@@ -1,24 +1,26 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import axios from 'axios';
 // var axios = require("axios");
 
 class Login extends React.Component {
     
-    // state = {}
+    state = {}
 
-    // setValue(e) {   
-    //     this.setState({[e.target.name]: e.target.value})
-    // }
+    setValue(e) {   
+        this.setState({[e.target.name]: e.target.value})
+    }
 
-    // login() {
-    //     axios.post('/users/login', this.state).then((res) => {
-    //         localStorage.setItem('token', res.data.token) 
-    //         window.location.pathname = '/home';
-    //     })
-    // }
+    login() {
+        axios.post('/users/login', this.state).then((res) => {
+            localStorage.setItem('token', res.data.token) 
+            window.location.pathname = '/home';
+        })
+    }
 
   render() {
     return (
+        <div className="bg-image-container">
+        {/* <img src="https://s3.amazonaws.com/meditrack/MGbackgroundpic.jpg"></img> */}
         <div className="signin-container">
         <div className="signin-form">
 
@@ -36,7 +38,8 @@ class Login extends React.Component {
                     <button type="submit" className="btn my-submit-btn btn-secondary" onClick={this.signIn}>Submit</button>
                     </form>
                     <br></br>
-                    <h6><Link to="Register">Register</Link></h6>
+                    <h6><a href="Register">Register</a></h6>
+    </div>
     </div>
     </div>
     );

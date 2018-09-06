@@ -13,11 +13,10 @@ body {
     padding-right: 200px;
     background: #981D31;
 
-
 }
 a{
     display: inline;
-    
+
 }
 .dash{
     display: flex;
@@ -63,4 +62,3 @@ a{
     display: block;
     text-align: left;
 }
-
