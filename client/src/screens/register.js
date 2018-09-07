@@ -12,7 +12,7 @@ class Register extends Component {
         e.preventDefault()
         axios.post('/users/signup', this.state).then((res) => {
             localStorage.setItem('token', res.data.token) 
-            window.location.pathname = '/home';
+            window.location.pathname = '/';
         })
     }
   render() {
@@ -21,19 +21,19 @@ class Register extends Component {
         <div className="registration-form">
 
             <h1>Register</h1>
-                <form>
+                <form onSubmit= {(e)=> this.register(e)}>
                 <div className="form-group">
                 <label className="inputName" >Name</label>
-                <input type="name" onChange={this.handleNameChange} id="inputName" className="form-control my-form-border" placeholder="" required />
+                <input type="name" name="name" onChange={(e)=> this.setValue(e)} id="inputName" className="form-control my-form-border" placeholder="" required />
                     </div>
                     <div className="form-group">
                         <label className="exampleInputEmail1">Email address</label>
-                        <input type="email" onChange={this.handleEmailChange} className="form-control my-form-border" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required />
+                        <input type="email" name="email" onChange={(e)=> this.setValue(e)} className="form-control my-form-border" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required />
                        
                     </div>
                     <div className="form-group">
                         <label className="exampleInputPassword1">Password</label>
-                        <input type="password" onChange={this.handlePasswordChange} className="form-control my-form-border" id="exampleInputPassword1" placeholder="" required />
+                        <input type="password" name="password" onChange={(e)=> this.setValue(e)} className="form-control my-form-border" id="exampleInputPassword1" placeholder="" required />
                     </div>
                     <button type="submit" className="btn my-submit-btn btn-secondary">Submit</button>
                     </form>
