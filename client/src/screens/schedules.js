@@ -22,10 +22,15 @@ class Schedules extends Component {
                 <h3>Please use the following form to add student hours:</h3><br></br><br></br>
                 <form>
                     <div className="report-form-container">
-                        <div className="form-group">
-                            <label for="exampleFormControlInput1">Student Name:</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" required />
-                        </div>
+                    <label for="StudentInputForm">Student Name:</label>
+                    <div class="row">
+                            <div class="col">
+                            <input type="text" className="form-control" placeholder="First Name" />
+                            </div>
+                            <div class="col">
+                            <input type="text" className="form-control" placeholder="Last Name" />
+                            </div>
+                        </div><br></br>
                         <div className="form-group">
                             <label for="exampleFormControlSelect1">Select Year:</label>
                             <select className="form-control" id="exampleFormControlSelect1" required>
