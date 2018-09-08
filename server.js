@@ -23,10 +23,7 @@ app.use('/users', users);
 //mlab connection
 mongoose.connect('mongodb://Meditrack:Meditrack123@ds133252.mlab.com:33252/studentdatabase');
 
-mongoose.connect(process.env.db_url,function(err){
-    if(err) return console.log(err)
-      console.log("Connected to mLab DB")
-  });
+
 // PRODUCTION ONLY
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));
