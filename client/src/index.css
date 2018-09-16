@@ -15,7 +15,7 @@ body {
   background-size: cover;
 }
 .home-container{
-  width: 65%;
+  width: 60%;
   height: 80%;
   background-color: white;
   opacity: .85;
@@ -246,4 +246,26 @@ footer a:hover{
 
   .jumbotron{
     background-color: lightgray
+  }
+
+  .help-container{
+    width: 60%;
+    margin: auto;
+  }
+  .questions-container{
+    font-size: 2em;
+    text-align: left;
+  }
+ .questions-container .my-questions:hover{
+    color: #981D31;
+  }
+
+ .list-group-item .questions li:hover{
+    color: blue;
+  }
+
+  .questions-container .answer-item{
+    font-style: italic;
+    text-align: left;
+    font-size: .8em;
   }
