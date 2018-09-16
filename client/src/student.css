@@ -16,7 +16,21 @@ body {
 }
 a{
     display: inline;
+    color: black;
+}
+a:hover{
+    color: white;
+}
 
+.jumbotron .fa{
+    background-color: #981D31;
+}
+.jumbotron .fa:hover{
+    background-color: #981D31;
+    opacity: 1
+}
+.jumbotron .fa-facebook:hover{
+    background-color: #981D31;
 }
 .dash{
     display: flex;
@@ -38,6 +52,12 @@ a{
     padding: 0 15px 15px;
     background:#fff;
     border-radius: 5px;
+}
+.card .fa{
+    background-color: white;
+}
+.card .fa:hover{
+    background-color: white;
 }
 .card-two{
     width: 100%;

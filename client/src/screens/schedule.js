@@ -10,7 +10,7 @@ class Schedule extends Component {
                     </div>
                 <div className="Menu">
                     <nav>
-                        <a href="/student" class="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
+                        <a href="/student" className="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
                         <a href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
                         <a href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                         <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
