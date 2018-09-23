@@ -1,23 +1,35 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import styles from '../student.css';
 
 class Student extends Component {
     render (){
         return (
-            <div className= "jumbotron">
-                <div className="heading">
-                        <h1 className="dash">Dashboard</h1>
-                        <h6 className="welcome">Welcome to the Student Dashboard</h6>
+            <div>
+            <div className="welcome-student-dash">
+                <div className="welcome-info">
+                    <p className="welcome-text">Welcome to the Student Dashboard</p>
                     </div>
-                <div className="Menu">
-                    <nav>
-                        <a href="/student" className="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
-                        <a href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
-                        <a href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
-                        <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
-                    </nav>
+                    </div>
+                <div className="my-vertical-nav">
+                <div className="row vertical-test">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/student"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
+                            </li>
+                         </ul>
+                    </div>
                 </div>
+            <div className= "jumbotron">
+             
                 <container className="contentArea">
                     <div className="cards">
                         <div className="card">
@@ -25,28 +37,11 @@ class Student extends Component {
                             <span className="user-name">'student name'{this.props.name}</span>
                             <span className="title">'title if applicable'{this.props.title}</span>
                         </div>
-                        <div className="card-two">
-                            <h6>Completion</h6>
-                            <span className="specialty">Obstetrics</span>
-                            <div className= "progress">
-                                <div className="progress-bar bg-success w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                            </div>
-                            <span className="specialty">Pediatrics</span>
-                            <div className= "progress">
-                                <div className="progress-bar bg-success w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
-                            </div>
-                            <span className="specialty">Surgery</span>
-                            <div className= "progress">
-                                <div className="progress-bar bg-success w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">50%</div>
-                            </div>
-                            <span className="specialty">Family Medicine</span>
-                            <div className= "progress">
-                                <div className="progress-bar bg-success w-100" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </container>
             </div>
+           </div> 
         )
     };
 }

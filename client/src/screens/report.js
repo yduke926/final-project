@@ -3,19 +3,36 @@ import React, { Component } from 'react';
 class Report extends Component {
     render(){
         return (
+            <div>
+            <div className="welcome-student-dash">
+                <div className="welcome-info">
+                    <p className="welcome-text">Welcome to the Student Dashboard</p>
+                    </div>
+                    </div>
+                <div className="my-vertical-nav">
+                <div className="row vertical-test">
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/student"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
             <div className= "jumbotron">
-                <div className="heading">
+                {/* <div className="heading">
                         <h1 className="dash">Dashboard</h1>
                         <h6 className="welcome">Welcome to the Student Dashboard</h6>
-                    </div>
-                <div className="Menu">
-                    <nav>
-                        <a href="/student" class="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
-                        <a href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
-                        <a href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
-                        <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
-                    </nav> 
-                </div>
+                    </div> */}
+            
                 {/* reporting form */}
                 <h3>Please use the following form for submission of student reports:</h3><br></br><br></br>
                 <form>
@@ -61,6 +78,7 @@ class Report extends Component {
                 </form>
                 <button type="button" className="btn btn-secondary">Submit</button>
              </div>
+        </div>
         )
     };
 }
