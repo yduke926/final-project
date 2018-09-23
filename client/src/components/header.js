@@ -19,7 +19,7 @@ class Header extends Component {
         <a className="nav-link" href="student">Dashboard</a>
       </li>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a className="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Student Resources
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -32,7 +32,7 @@ class Header extends Component {
         <a className="nav-link" href="Login">Log In</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Log Out</a>
+        <a className="nav-link" href="">Log Out</a>
       </li>
     </ul>
   </div> 
