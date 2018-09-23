@@ -12,7 +12,7 @@ class Register extends Component {
         e.preventDefault()
         axios.post('/users/signup', this.state).then((res) => {
             localStorage.setItem('token', res.data.token) 
-            window.location.pathname = '/';
+            window.location.pathname = '/login';
         })
     }
   render() {

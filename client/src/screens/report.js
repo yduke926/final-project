@@ -1,7 +1,59 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-class Report extends Component {
-    render(){
+class Report extends React.Component {
+
+    state = {}
+
+    setValue(e) {   
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+//     componentDidMount() {
+//         let authToken = window.localStorage.token;
+//         let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
+//         axios.get(`/studentreports/${payload.id}`).then((res) => {
+//             this.setState({
+//                 owner: payload.id,
+//                 studentreports: res.data
+//             })
+//         })
+//     }
+
+// save() {
+//     axios.post('/studentreports', this.state).then(() => {
+//         window.location.reload()
+//     })
+// }
+save() {
+    let authToken = window.localStorage.token;
+
+    axios.post('/studentreports', this.state,
+        {
+            headers: { Authorization: "Bearer " + authToken }
+        }).then(() => {
+            window.location = '/student';
+        })
+}
+
+//  edit(sr) {
+//      let newStudentreport = window.prompt(`Update Studentreport: ${sr.description}`);
+//      this.setState({newStudentreport: newStudentreport}, () =>
+//      {
+//          axios.put(`/studentreports/${sr._id}`,
+//         this.state).then(() => {
+//             window.location.reload();
+//         })
+//      })
+//  }
+
+//  delete(sr) {
+//      axios.delete(`/studentreports/${sr._id}`).then(() => {
+//     window.location.reload()
+//     })
+//  }
+
+render(){
         return (
             <div className= "jumbotron">
                 <div className="heading">
@@ -23,43 +75,50 @@ class Report extends Component {
                     <label for="StudentInputForm">Student Name:</label>
                         <div class="row">
                             <div class="col">
-                            <input type="text" className="form-control" placeholder="First Name" />
+                            <input type="text" className="form-control" placeholder="First Name" name = 'firstName' onChange={(e) => this.setValue(e)}/>
                             </div>
                             <div class="col">
-                            <input type="text" className="form-control" placeholder="Last Name" />
+                            <input type="text" className="form-control" placeholder="Last Name" name = 'lastName' onChange={(e) => this.setValue(e)} />
                             </div>
                         </div><br></br>
                         <div className="form-group">
                             <label for="exampleFormControlInput1">Email address:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" required />
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" name = 'email' required onChange={(e) => this.setValue(e)}/>
                         </div>
+                        
                         <div className="form-group">
-                            <label for="exampleFormControlInput1">Today's Date:</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date Format MM/DD/YYYY" required />
-                        </div>
-                        <div className="form-group">
-                            <label for="exampleFormControlSelect1">Select Year:</label>
-                            <select className="form-control" id="exampleFormControlSelect1" required >
+                            <label for="exampleFormControlSelect1">Year:</label>
+                            <select className="form-control" id="exampleFormControlSelect1" name = 'year' required onChange={(e) => this.setValue(e)}>
                             <option>M3</option>
                             <option>M4</option>
                             </select>
                         </div>
                         <div className="form-group">
-                            <label for="exampleFormControlSelect2">Specialty:</label>
-                            <select multiple className="form-control" id="exampleFormControlSelect2" required >
-                            <option>Obstetrics</option>
+                            <label for="exampleFormControlTextarea1">Obstetrics</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'studentreport.obstetrics' required onChange={(e) => this.setValue(e)}></textarea>
+                            <label for="exampleFormControlTextarea1">Pediatrics</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'studentreport.pediatrics' required onChange={(e) => this.setValue(e)}></textarea>
+                            <label for="exampleFormControlTextarea1">Surgery</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'studentreport.surgery' required onChange={(e) => this.setValue(e)}></textarea>
+                            <label for="exampleFormControlTextarea1">Family Medicine</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'sudentreport.familyMedicine' required onChange={(e) => this.setValue(e)}></textarea>
+                            {/* <option>Obstetrics</option>
+                            <select multiple className="form-control" id="exampleFormControlSelect2" name = 'specialty.pediatrics' required onChange={(e) => this.setValue(e)}></select>
                             <option>Pediatrics</option>
+                            <select multiple className="form-control" id="exampleFormControlSelect2" name = 'specialty.surgery' required onChange={(e) => this.setValue(e)}></select>
                             <option>Surgery</option>
-                            <option>Family Medicine</option>
-                            </select>
+                            <select multiple className="form-control" id="exampleFormControlSelect2" name = 'specialty.familyMedicine' required onChange={(e) => this.setValue(e)}></select>
+                            <option>Family Medicine</option> */}
+                            
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label for="exampleFormControlTextarea1">Report:</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" required></textarea>
-                        </div>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'report' required onChange={(e) => this.setValue(e)}></textarea>
+                        </div> */}
                     </div>
                 </form>
-                <button type="button" className="btn btn-secondary">Submit</button>
+                <button type="button" className="btn btn-secondary"onClick={() => this.save()}>Submit</button>
+                
              </div>
         )
     };
