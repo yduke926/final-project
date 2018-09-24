@@ -3,9 +3,30 @@ let crypto = require('crypto');
 let jwt = require('jsonwebtoken');
 
 let UserSchema = new mongoose.Schema({
-  email : String,
+  name: String,
+  email : String, 
   passwordHash : String,
-  salt: String
+  salt: String,
+  specialtyOb: {type:String, default: 'Obstetrics'},
+  specialtyOp: {type:String, default: 'Surgery'},
+  specialtyFM: {type:String, default: 'Family Medicine'},
+  specialtyPed: {type: String, default: 'Pediatrics'},
+  specialtyObhours: {
+    current: {type:Number, default: 0},
+    target: {type: Number, default: 50}
+  },
+  specialtyFmhours: {
+    current: {type:Number, default: 0},
+    target: {type: Number, default: 50}
+  },
+  specialtyOphours: {
+    current: {type:Number, default: 0},
+    target: {type: Number, default: 50}
+  },
+  specialtyPedhours: {
+    current: {type:Number, default: 0},
+    target: {type: Number, default: 50}
+  }
 });
 
 UserSchema.method("setPassword", function(password){
