@@ -5,6 +5,7 @@ let User = mongoose.model('User');
 
 router.post('/signup', ((req, res, next) => {
   let newUser = new User();
+  newUser.name = req.body.name;
   newUser.email = req.body.email;
   newUser.setPassword(req.body.password);
   newUser.save((err) => {
