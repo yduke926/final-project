@@ -20,7 +20,6 @@ class Login extends React.Component {
   render() {
     return (
         <div className="bg-image-container">
-        {/* <img src="https://s3.amazonaws.com/meditrack/MGbackgroundpic.jpg"></img> */}
         <div className="signin-container">
         <div className="signin-form">
 
@@ -39,8 +38,8 @@ class Login extends React.Component {
                     </form>
                     <br></br>
                     <h6><a href="Register">Register</a></h6>
-    </div>
-    </div>
+            </div>
+         </div>
     </div>
     );
    }

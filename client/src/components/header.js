@@ -18,21 +18,21 @@ class Header extends Component {
       <li className="nav-item">
         <a className="nav-link" href="student">Dashboard</a>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="Login">Login</a>
-      </li>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a className="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Student Resources
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a className="dropdown-item"  href="#">Schedule</a>
-          <a className="dropdown-item"  href="#">Report</a>
-          <a className="dropdown-item"  href="#">FAQ</a>
+        <a className="dropdown-item"  href="/schedule">Schedule</a>
+          <a className="dropdown-item"  href="/report">Report</a>
+          <a className="dropdown-item"  href="/help">FAQ</a>
         </div>
+        </li> 
+      <li className="nav-item">
+        <a className="nav-link" href="Login">Log In</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Log Out</a>
+        <a className="nav-link" href="">Log Out</a>
       </li>
     </ul>
   </div> 
