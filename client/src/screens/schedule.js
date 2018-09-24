@@ -3,35 +3,50 @@ import React, { Component } from 'react';
 class Schedule extends Component {
     render(){
         return (
+            <div>
+            <div className="welcome-student-dash">
+                <div className="welcome-info">
+                    <p className="welcome-text">Welcome to the Student Dashboard</p>
+                    </div>
+                    </div>
+                <div className="my-vertical-nav">
+                  <div className="row vertical-test">
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/student"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
             <div className= "jumbotron">
-                <div className="heading">
+                {/* <div className="heading">
                         <h1 className="dash">Dashboard</h1>
                         <h6 className="welcome">Welcome to the Student Dashboard</h6>
-                    </div>
-                <div className="Menu">
-                    <nav>
-                        <a href="/student" class="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
-                        <a href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
-                        <a href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
-                        <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
-                    </nav> 
-                </div>
-                {/* schedule reporting form */}
+                    </div> */}
                 <h3>Please use the following form for submission of completed student hours:</h3><br></br><br></br>
                 <form>
                     <div className="report-form-container">
                     <label for="StudentInputForm">Student Name:</label>
-                        <div class="row">
-                            <div class="col">
+                        <div className="row">
+                            <div className="col">
                             <input type="text" className="form-control" placeholder="First Name" />
                             </div>
-                            <div class="col">
+                            <div className="col">
                             <input type="text" className="form-control" placeholder="Last Name" />
                             </div>
                         </div><br></br>
                         <div className="form-group">
                             <label for="exampleFormControlInput1">Email address:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" required />
+                            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Enter Email" required />
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlSelect1">Select Year:</label>
@@ -51,13 +66,13 @@ class Schedule extends Component {
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlInput1">Hours Completed:</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" required />
+                            <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="" required />
                         </div>
                     </div>
                 </form>
                 <button type="button" className="btn btn-secondary">Submit</button>
              </div>
-           
+           </div>
             
         )
     };
