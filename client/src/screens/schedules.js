@@ -1,7 +1,37 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Schedules extends Component {
+    state = {
+        userlist:[],
+        specialty: 'Ob'
+    }
+
+    setValue(e) {
+        this.setState({[e.target.name]: e.target.value})
+    }
+    componentDidMount(){
+        this.loadUsers()
+    }
+
+    loadUsers = () => {
+        axios.get('/api/adminhours/load-users').then((res) => {
+            console.log(res)
+            this.setState({
+                userlist: res.data,
+            })
+        })
+    }
+
+    save() {
+        axios.post('/api/adminhours', this.state).then(() => {
+            window.location.reload()
+        })
+    }
+
+
     render(){
+        
         return (
             <div>
             <div className="welcome-student-dash">
@@ -32,38 +62,37 @@ class Schedules extends Component {
                 <h3>Please use the following form to add student hours:</h3><br></br><br></br>
                 <form>
                     <div className="report-form-container">
-                    <label for="StudentInputForm">Student Name:</label>
-                    <div class="row">
-                            <div class="col">
-                            <input type="text" className="form-control" placeholder="First Name" />
-                            </div>
-                            <div class="col">
-                            <input type="text" className="form-control" placeholder="Last Name" />
-                            </div>
-                        </div><br></br>
+                    <div className="form-group">
+                    <label for="StudentInputForm1">Select Student:</label>
+                    <select className="form-control" id="exampleFormControlSelect0" name="userId" onChange={(e) => this.setValue(e)}>
+                   {(this.state.userlist) ? this.state.userlist.map((user,index) => (
+                        <option key={user._id} value={user._id}>{user.name}</option>
+                           )):""}
+                            </select>
+                    </div>
                         <div className="form-group">
                             <label for="exampleFormControlSelect1">Select Year:</label>
-                            <select className="form-control" id="exampleFormControlSelect1" required>
+                            <select className="form-control" id="exampleFormControlSelect1" name= "year" required onChange={(e) => this.setValue(e)}>
                             <option>M3</option>
                             <option>M4</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlSelect2">Specialty:</label>
-                            <select multiple className="form-control" id="exampleFormControlSelect2" required>
-                            <option>Obstetrics</option>
-                            <option>Pediatrics</option>
-                            <option>Surgery</option>
-                            <option>Family Medicine</option>
+                            <select className="form-control" id="exampleFormControlSelect2" name="specialty" required onChange={(e) => this.setValue(e)}>
+                                <option value="Ob">Obstetrics</option>
+                                <option value="Ped">Pediatrics</option>
+                                <option value="Op">Surgery</option>
+                                <option value="Fm">Family Medicine</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlInput1">Add Hours:</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" required />
+                            <input type="number" onChange={(e) => this.setValue(e)} name = "hours" class="form-control" id="exampleFormControlInput1" placeholder="" required />
                         </div>
                     </div>
                 </form>
-                <button type="button" className="btn btn-secondary">Submit</button>
+                <button type="button" className="btn btn-secondary" onClick={() => this.save()}>Submit</button>
              </div>
           </div>
         </div>
