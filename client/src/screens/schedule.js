@@ -1,6 +1,34 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Schedule extends Component {
+    state = {
+        userlist:[],
+        specialty: 'Ob',
+    
+    }
+    setValue(e) {
+        this.setState({[e.target.name]: e.target.value})
+    }
+    componentDidMount(){
+        this.loadUsers()
+    }
+
+    loadUsers = () => {
+        axios.get('/api/adminhours/load-users').then((res) => {
+            console.log(res)
+            this.setState({
+                userlist: res.data,
+            })
+        })
+    }
+
+    save() {
+        axios.post('/api/adminhours', this.state).then(() => {
+            window.location.reload()
+        })
+    }
+
     render(){
         return (
             <div>
@@ -35,29 +63,24 @@ class Schedule extends Component {
                 <h3>Please use the following form for submission of completed student hours:</h3><br></br><br></br>
                 <form>
                     <div className="report-form-container">
-                    <label for="StudentInputForm">Student Name:</label>
-                        <div className="row">
-                            <div className="col">
-                            <input type="text" className="form-control" placeholder="First Name" />
-                            </div>
-                            <div className="col">
-                            <input type="text" className="form-control" placeholder="Last Name" />
-                            </div>
-                        </div><br></br>
-                        <div className="form-group">
-                            <label for="exampleFormControlInput1">Email address:</label>
-                            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Enter Email" required />
-                        </div>
+                    <label for="StudentInputForm">Select your name:</label>
+                    <select className="form-control" id="exampleFormControlSelect0" name="userId" onChange={(e) => this.setValue(e)}>
+                   {(this.state.userlist) ? this.state.userlist.map((user,index) => (
+                        <option key={user._id} value={user._id}>{user.name}</option>
+                           )):""}
+                            </select>
+                        <br></br>
+                        
                         <div className="form-group">
                             <label for="exampleFormControlSelect1">Select Year:</label>
-                            <select className="form-control" id="exampleFormControlSelect1" required >
+                            <select className="form-control" id="exampleFormControlSelect1" required name="year" >
                             <option>M3</option>
                             <option>M4</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlSelect2">Specialty:</label>
-                            <select multiple className="form-control" id="exampleFormControlSelect2" required >
+                            <select className="form-control" id="exampleFormControlSelect2" name= "specialty" required onChange={(e) => this.setValue(e)} >
                             <option>Obstetrics</option>
                             <option>Pediatrics</option>
                             <option>Surgery</option>
@@ -66,11 +89,11 @@ class Schedule extends Component {
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlInput1">Hours Completed:</label>
-                            <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="" required />
+                            <input type="number" onChange={(e) => this.setValue(e)} name = "hours" class="form-control" id="exampleFormControlInput1" placeholder="" required />
                         </div>
                     </div>
                 </form>
-                <button type="button" className="btn btn-secondary">Submit</button>
+                <button type="button" className="btn btn-secondary" onClick={() => this.save()}>Submit</button>
              </div>
            </div>
             

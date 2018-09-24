@@ -14,7 +14,6 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 // models
 require('./models/user');
-require('./models/Adminhour');
 let users = require('./routes/users');
 const adminhours = require('./routes/api/adminhours');
 // app middleware
