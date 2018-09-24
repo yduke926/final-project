@@ -3,7 +3,9 @@ import axios from 'axios';
 
 class Report extends React.Component {
 
-    state = {}
+    state = {
+        specialty: "Obstetrics"
+    }
 
     setValue(e) {   
         this.setState({[e.target.name]: e.target.value})
@@ -72,20 +74,6 @@ render(){
                 <h3>Please use the following form for submission of student reports:</h3><br></br><br></br>
                 <form>
                     <div className="report-form-container">
-                    <label for="StudentInputForm">Student Name:</label>
-                        <div class="row">
-                            <div class="col">
-                            <input type="text" className="form-control" placeholder="First Name" name = 'firstName' onChange={(e) => this.setValue(e)}/>
-                            </div>
-                            <div class="col">
-                            <input type="text" className="form-control" placeholder="Last Name" name = 'lastName' onChange={(e) => this.setValue(e)} />
-                            </div>
-                        </div><br></br>
-                        <div className="form-group">
-                            <label for="exampleFormControlInput1">Email address:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" name = 'email' required onChange={(e) => this.setValue(e)}/>
-                        </div>
-                        
                         <div className="form-group">
                             <label for="exampleFormControlSelect1">Year:</label>
                             <select className="form-control" id="exampleFormControlSelect1" name = 'year' required onChange={(e) => this.setValue(e)}>
@@ -94,27 +82,18 @@ render(){
                             </select>
                         </div>
                         <div className="form-group">
-                            <label for="exampleFormControlTextarea1">Obstetrics</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'studentreport.obstetrics' required onChange={(e) => this.setValue(e)}></textarea>
-                            <label for="exampleFormControlTextarea1">Pediatrics</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'studentreport.pediatrics' required onChange={(e) => this.setValue(e)}></textarea>
-                            <label for="exampleFormControlTextarea1">Surgery</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'studentreport.surgery' required onChange={(e) => this.setValue(e)}></textarea>
-                            <label for="exampleFormControlTextarea1">Family Medicine</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'sudentreport.familyMedicine' required onChange={(e) => this.setValue(e)}></textarea>
-                            {/* <option>Obstetrics</option>
-                            <select multiple className="form-control" id="exampleFormControlSelect2" name = 'specialty.pediatrics' required onChange={(e) => this.setValue(e)}></select>
-                            <option>Pediatrics</option>
-                            <select multiple className="form-control" id="exampleFormControlSelect2" name = 'specialty.surgery' required onChange={(e) => this.setValue(e)}></select>
-                            <option>Surgery</option>
-                            <select multiple className="form-control" id="exampleFormControlSelect2" name = 'specialty.familyMedicine' required onChange={(e) => this.setValue(e)}></select>
-                            <option>Family Medicine</option> */}
-                            
+                        <label for="exampleFormControlInput1">Specialty:</label>
+                            <select className="form-control" id="exampleFormControlSelect1" name = 'specialty' required onChange={(e) => this.setValue(e)}>
+                                <option value="Obstetrics">Obstetrics</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                                <option value="Surgery">Surgery</option>
+                                <option value="Family Medicine">Family Medicine</option>
+                            </select>      
                         </div>
-                        {/* <div className="form-group">
-                            <label for="exampleFormControlTextarea1">Report:</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'report' required onChange={(e) => this.setValue(e)}></textarea>
-                        </div> */}
+                        <div className="form-group">
+                            <label for="exampleFormControlTextarea1">Report</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" name = 'reportText' required onChange={(e) => this.setValue(e)}></textarea>
+                        </div>
                     </div>
                 </form>
                 <button type="button" className="btn btn-secondary"onClick={() => this.save()}>Submit</button>

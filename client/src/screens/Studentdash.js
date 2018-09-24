@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from '../student.css'; 
 import axios from 'axios';
 import report from './report';
+import { readFile } from 'fs';
 
 // let editButtons = document.querySelectorAll('.editBtn');
 
@@ -15,8 +16,7 @@ import report from './report';
 
 class StudentDash extends React.Component {
     constructor(props) {super(props)
-        this.state={studentreports:[]
-    }
+        this.state={}
     // this.loadStudentReports()
 }
 // loadStudentReports =() => {
@@ -35,12 +35,26 @@ setValue(e) {
                 console.log(authToken);                
                 let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
                 axios.get(`/studentreports/${payload.id}`).then((res) => {
-                    console.log(res)
+                
+                    let reports = {};
+
+                    if(res.data) {
+                        res.data.forEach(rep => {
+                            if(reports.hasOwnProperty(rep.specialty)) {
+                                reports[rep.specialty].push(rep);
+                            } else {
+                                reports[rep.specialty] = [rep];
+                            }
+                        });
+                    }
+
+                    console.log(reports);
+
                     this.setState({
                         userID: payload.id,
-                        studentreports: res.data
+                        studentreports: reports
+                    })
             })
-        })
     }
             save() {
                     axios.post('/studentreports', this.state).then(() => {
@@ -80,32 +94,45 @@ setValue(e) {
                 </div>
               
                 <div>
-        <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Obstetrics
-                </button>
-            </h5>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div className="card-body" {(this.state.studentreports) ? this.state.studentreports.map((user, index) => (
-                    <option key={user.specialty}></option>
-                )):""}>
-               
-            </div>
-            <div class="card-body">
-                Report data #2..
-            </div><br></br>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">Edit</button>
-                <button type="button" class="btn btn-secondary">Delete</button><br></br>
+                <div class="accordion" id="accordionExample">
+                {(this.state.studentreports) ? Object.keys(this.state.studentreports).map((spec) => (
+                   
+                    <div class="card" key={spec}>
+                        <div class="card-header" id={"heading" + spec}>
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target={"#collapse" + spec.replace(' ', '')} aria-expanded="true" aria-controls="collapseOne">
+                                {spec}
+                                </button>
+                            </h5>
+                        </div>
+                        <div id={"collapse" + spec.replace(' ', '')} class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div className="card-body">
+                                <div class="list-group"> 
+                                {this.state.studentreports[spec].map(rep => (
+                                    <a key={rep._id} href="#" class="list-group-item flex-column align-items-start">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="mb-1">{rep.date}</h5>
+                                        </div>
+                                        <p class="mb-1">{rep.report}</p>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary">Edit</button>
+                                            <button type="button" class="btn btn-secondary">Delete</button>
+                                        </div>
+                                        <small>{rep._id}</small>
+                                    </a>
+                                
+                                ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                )):""}
                 </div>
-            </div>
         </div>
-        
-        <div class="card">
+    </div>
+    );
+        {/*<div class="card">
             <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -159,15 +186,7 @@ setValue(e) {
                 </div>
             </div>
         </div>
-        </div>
-      </div>
-
-                
-               
-            </div>
-            
-        
-     );  
+        </div> */} 
     };
     
                     
