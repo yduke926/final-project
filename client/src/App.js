@@ -14,6 +14,7 @@ import Schedule from './screens/schedule';
 import Schedules from './screens/schedules';
 import Students from './screens/students';
 import Home from './screens/home';
+import HospitalsMap from './screens/hospitalsmap';
 
 class App extends Component {
   render() {
@@ -32,6 +33,7 @@ class App extends Component {
         <Route exact path='/schedule' component={Schedule}/>
         <Route exact path='/schedules' component={Schedules}/>
         <Route exact path='/students' component={Students}/>
+        <Route exact path='/hospitalsmap' component={HospitalsMap}/>
         <Footer />
       </div>
       </Router>

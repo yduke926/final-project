@@ -11,18 +11,18 @@ class Student extends Component {
                     </div>
                 <div className="my-vertical-nav">
                 <div className="row vertical-test">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/admin"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/admin"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/students"><i className="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>Students</a>
+                            <li className="nav-item">
+                                <a className="nav-link active" href="/students"><i className="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>Students</a>
                             </li>
                          </ul>
                     </div>

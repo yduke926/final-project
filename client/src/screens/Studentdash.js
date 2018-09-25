@@ -22,6 +22,9 @@ class Student extends Component {
                             <li class="nav-item">
                                 <a class="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/hospitalsmap"><i class="fa fa-hospital-o" aria-hidden="true"></i>Hospital Map</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                             </li>
