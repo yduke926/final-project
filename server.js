@@ -14,12 +14,14 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 // models
 require('./models/user');
 let users = require('./routes/users');
+let student = require('./routes/student');
 // app middleware
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(passport.initialize());
 app.use('/users', users);
+app.use('/student', student);
 //mlab connection
 mongoose.connect('mongodb://Meditrack:Meditrack123@ds133252.mlab.com:33252/studentdatabase');
 

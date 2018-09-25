@@ -14,6 +14,7 @@ import Reports from './screens/reports';
 import Schedule from './screens/schedule';
 import Schedules from './screens/schedules';
 import Students from './screens/students';
+import StudentEdit from './screens/studentedit';
 import Home from './screens/home';
 
 class App extends Component {
@@ -38,6 +39,7 @@ class App extends Component {
         <Route exact path='/schedule' component={Schedule}/>
         <Route exact path='/schedules' component={Schedules}/>
         <Route exact path='/students' component={Students}/>
+        <Route path='/studentedit' render={(props) => <StudentEdit {...props} />}/>
         <Footer />
       </div>
       </Router>
