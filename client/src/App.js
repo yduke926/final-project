@@ -37,10 +37,10 @@ class App extends Component {
         <Route exact path='/schedules' component={Schedules}/>
         <Route exact path='/students' component={Students}/>
         <Route exact path='/hospitalsmap' component={HospitalsMap}/>
-        <Route path='/studentedit' render={(props) => <StudentEdit {...props} />}/
+        <Route path='/studentedit' render={(props) => <StudentEdit {...props} />}/>
         <Footer />
       </div>
-      </Router>
+        </Router>
     );
   }
 }
