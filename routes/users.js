@@ -1,9 +1,9 @@
 let express = require('express');
 let mongoose = require('mongoose');
 let router = express.Router();
-let User = mongoose.model('User');
+let User = require('../models/user');
 
-router.post('/signup', ((req, res, next) => {
+router.post('/register', ((req, res, next) => {
   let newUser = new User();
   newUser.name = req.body.name;
   newUser.email = req.body.email;
@@ -20,12 +20,12 @@ router.post('/signup', ((req, res, next) => {
 router.post('/login', ((req, res) => {
   User.findOne({email: req.body.email}, ((err, user) => {
     if(err) {
-      res.sendStatus(500)
+      res.sendStatus(500);
     } else {
       if(user.validatePassword(req.body.password)) {
         res.json({token: user.generateJWT()})
       } else {
-        res.json('Incorrect Password')
+        res.send('Incorrect Password')
       }
 
     }

@@ -14,15 +14,23 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 // models
 require('./models/user');
+require('./models/studentreport');
+
+let studentreports = require('./routes/studentreports');
 let users = require('./routes/users');
+let student = require('./routes/student');
 const adminhours = require('./routes/api/adminhours');
+
 // app middleware
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(passport.initialize());
 app.use('/users', users);
+app.use('/student', student);
+app.use('/studentreports', studentreports);
 app.use('/api/adminhours', adminhours);
+
 
 //mlab connection
 mongoose.connect('mongodb://Meditrack:Meditrack123@ds133252.mlab.com:33252/studentdatabase');
