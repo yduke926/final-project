@@ -62,20 +62,6 @@ class Student extends Component {
         return (
             <div>
                 <div className= "jumbotron">
-                    <div className="heading">
-                        <h1 className="dash">Dashboard</h1>
-                        <h6 className="welcome">Welcome to the Administration Dashboard</h6>
-                    </div>
-                    <div className="Menu">
-                        <nav>
-                            <a href="#" className="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
-                            <a href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
-                            <a href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
-                            <a href="/messages"><i className="fa fa-envelope"aria-hidden="true"></i></a>
-                            <span className="notifications">2</span>
-                            <a href="/students"><i className="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>Students</a>
-                        </nav>
-                    </div>
                     <div className="welcome-student-dash">
                         <div className="welcome-info">
                             <p className="welcome-text">Welcome to the Admin Dashboard</p>
