@@ -5,7 +5,7 @@ import Login from './screens/login';
 import Register from './screens/register';
 import Header from './components/header';
 import Footer from './components/footer';
-import StudentDash from './screens/studentdash';
+import StudentDash from './screens/Studentdash';
 import Admin from './screens/Admin';
 import Help from './screens/help';
 import Report from './screens/report';

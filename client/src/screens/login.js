@@ -7,11 +7,11 @@ class Login extends React.Component {
     
     state = {}
 
-    setValue(e) {   
+    setValue = (e) => {   
         this.setState({[e.target.name]: e.target.value})
     }
 
-    login(e) {
+    login = (e) => {
         e.preventDefault()
         axios.post('/users/login', this.state).then((res) => {
             localStorage.setItem('token', res.data.token) 
@@ -26,7 +26,7 @@ class Login extends React.Component {
         <div className="signin-form">
 
             <h1>Log In</h1>
-                <form onSubmit= {(e)=> this.login(e)}>
+                <div>
                     <div className="form-group">
                         <label className="exampleInputEmail1">Email address:</label>
                         <input type="email" onChange={(e)=> this.setValue(e)} className="form-control my-form-border" id="exampleInputEmail1" aria-describedby="emailHelp" name = 'email' placeholder="" required />
@@ -36,10 +36,10 @@ class Login extends React.Component {
                         <label className="exampleInputPassword1">Password</label>
                         <input type="password" onChange={(e)=> this.setValue(e)} className="form-control my-form-border" id="exampleInputPassword1" name = 'password' placeholder="" required />
                     </div>
-                    <button type="submit" className="btn my-submit-btn btn-secondary" onClick={this.signIn}>Submit</button>
-                    </form>
-                    <br></br>
-                    <h6><a href="Register">Register</a></h6>
+                    <button className="btn my-submit-btn btn-secondary" onClick={this.login}>Submit</button>
+                </div>
+                <br></br>
+                <h6><a href="Register">Register</a></h6>
             </div>
          </div>
     </div>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
-import styles from '../student.css'; 
 import axios from 'axios';
 import report from './report';
 import { readFile } from 'fs';
@@ -213,10 +212,8 @@ setValue(e) {
                 </div>
             </div>
         </div>
-        </div> */}
-           </div> 
-        )
-
+        </div> 
+           </div> */}
     };
     
                     

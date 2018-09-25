@@ -20,12 +20,12 @@ router.post('/register', ((req, res, next) => {
 router.post('/login', ((req, res) => {
   User.findOne({email: req.body.email}, ((err, user) => {
     if(err) {
-      res.sendStatus(500)
+      res.sendStatus(500);
     } else {
       if(user.validatePassword(req.body.password)) {
         res.json({token: user.generateJWT()})
       } else {
-        res.json('Incorrect Password')
+        res.send('Incorrect Password')
       }
 
     }
