@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+
 import { Link } from "react-router-dom";
 import styles from '../student.css'; 
 import axios from 'axios';
 import report from './report';
 import { readFile } from 'fs';
+import styles from '../student.css';
+
 
 // let editButtons = document.querySelectorAll('.editBtn');
 
@@ -79,11 +82,30 @@ setValue(e) {
                          }                             
     render (){
         return (
-            <div className= "jumbotron">
-                <div className="heading">
-                        <h1 className="dash">Dashboard</h1>
-                        <h6 className="welcome">Welcome to the Student Dashboard</h6>
+            <div>
+            <div className="welcome-student-dash">
+                <div className="welcome-info">
+                    <p className="welcome-text">Welcome to the Student Dashboard</p>
                     </div>
+                    </div>
+                <div className="my-vertical-nav">
+                <div className="row vertical-test">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/student"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
+                            </li>
+                         </ul>
+                    </div>
+          </div>
                 <div className="Menu">
                     <nav>
                         <a href="/student" className="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
@@ -125,6 +147,10 @@ setValue(e) {
                                 </div>
                             </div>
                         </div>
+
+              
+                        
+
                     </div>
                     
                 )):""}
@@ -176,6 +202,7 @@ setValue(e) {
                 </button>
             </h5>
             </div>
+
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
                 Report data..
@@ -186,7 +213,10 @@ setValue(e) {
                 </div>
             </div>
         </div>
-        </div> */} 
+        </div> */}
+           </div> 
+        )
+
     };
     
                     

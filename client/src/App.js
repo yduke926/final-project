@@ -8,7 +8,6 @@ import Footer from './components/footer';
 import StudentDash from './screens/studentdash';
 import Admin from './screens/Admin';
 import Help from './screens/help';
-import Messages from './screens/messages';
 import Report from './screens/report';
 import Reports from './screens/reports';
 import Schedule from './screens/schedule';
@@ -24,17 +23,12 @@ class App extends Component {
       <Router>
       <div className="App">
         <Header />
-        <h1 className="App-intro">
-        {/* Your main content will go here! */}
-        </h1>
-      
         <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/student' component={StudentDash}/>
         <Route exact path='/admin' component={Admin}/>
         <Route exact path='/help' component={Help}/>
-        <Route exact path='/messages' component={Messages}/>
         <Route exact path='/report' component={Report}/>
         <Route exact path='/reports' component={Reports}/>
         <Route exact path='/schedule' component={Schedule}/>
