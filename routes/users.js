@@ -1,9 +1,9 @@
 let express = require('express');
 let mongoose = require('mongoose');
 let router = express.Router();
-let User = mongoose.model('User');
+let User = require('../models/user');
 
-router.post('/signup', ((req, res, next) => {
+router.post('/register', ((req, res, next) => {
   let newUser = new User();
   newUser.name = req.body.name;
   newUser.email = req.body.email;
