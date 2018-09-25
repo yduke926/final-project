@@ -283,3 +283,24 @@ footer a:hover{
 .help-container {
   margin-left: 30%
 }
+
+.map-list{
+  width: 30%;
+  font-size: 1.2em;
+  padding: 30px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 5%;
+  text-align: left;
+  }
+
+.map-container{
+  margin-top: 50px;
+  height: 500px;
+  width: 500px;
+  margin-left: 25%;
+  position: absolute;
+  border: rgb(78, 68, 68);
+  border-style: solid;
+  border-width: 5px;
+} 
