@@ -15,6 +15,7 @@ import Schedules from './screens/schedules';
 import Students from './screens/students';
 import StudentEdit from './screens/studentedit';
 import Home from './screens/home';
+import HospitalsMap from './screens/hospitalsmap';
 
 
 
@@ -35,10 +36,11 @@ class App extends Component {
         <Route exact path='/schedule' component={Schedule}/>
         <Route exact path='/schedules' component={Schedules}/>
         <Route exact path='/students' component={Students}/>
+        <Route exact path='/hospitalsmap' component={HospitalsMap}/>
         <Route path='/studentedit' render={(props) => <StudentEdit {...props} />}/>
         <Footer />
       </div>
-      </Router>
+        </Router>
     );
   }
 }

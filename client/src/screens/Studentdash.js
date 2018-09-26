@@ -89,55 +89,50 @@ setValue(e) {
                     </div>
                 <div className="my-vertical-nav">
                 <div className="row vertical-test">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/student"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                <a className="nav-link active" href="/student"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/hospitalsmap"><i className="fa fa-hospital-o" aria-hidden="true"></i>Hospital Map</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                             </li>
                          </ul>
                     </div>
           </div>
-                <div className="Menu">
-                    <nav>
-                        <a href="/student" className="active"><i className="fa fa-home" aria-hidden ="true"></i> Home</a>
-                        <a href="/report"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Report</a>
-                        <a href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
-                        <a href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
-                    </nav>
-                </div>
               
                 <div>
-                <div class="accordion" id="accordionExample">
+                <div className="accordion" id="accordionExample">
                 {(this.state.studentreports) ? Object.keys(this.state.studentreports).map((spec) => (
                    
-                    <div class="card" key={spec}>
-                        <div class="card-header" id={"heading" + spec}>
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target={"#collapse" + spec.replace(' ', '')} aria-expanded="true" aria-controls="collapseOne">
+                    <div className="card" key={spec}>
+                        <div className="card-header" id={"heading" + spec}>
+                            <h5 className="mb-0">
+                                <button className="btn btn-link" type="button" data-toggle="collapse" data-target={"#collapse" + spec.replace(' ', '')} aria-expanded="true" aria-controls="collapseOne">
                                 {spec}
                                 </button>
                             </h5>
                         </div>
-                        <div id={"collapse" + spec.replace(' ', '')} class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div id={"collapse" + spec.replace(' ', '')} className="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div className="card-body">
-                                <div class="list-group"> 
+                                <div className="list-group"> 
                                 {this.state.studentreports[spec].map(rep => (
                                     <a key={rep._id} href="#" class="list-group-item flex-column align-items-start">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="mb-1">{rep.date}</h5>
+                                        <div className="d-flex justify-content-between">
+                                            <h5 className="mb-1">{rep.date}</h5>
                                         </div>
-                                        <p class="mb-1">{rep.report}</p>
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-secondary">Edit</button>
-                                            <button type="button" class="btn btn-secondary">Delete</button>
+                                        <p className="mb-1">{rep.report}</p>
+                                        <div className="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" className="btn btn-secondary">Edit</button>
+                                            <button type="button" className="btn btn-secondary">Delete</button>
                                         </div>
                                         <small>{rep._id}</small>
                                     </a>
