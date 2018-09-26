@@ -3,12 +3,26 @@ let crypto = require('crypto');
 let jwt = require('jsonwebtoken');
 
 let UserSchema = new mongoose.Schema({
-
   name: String,
   email : String, 
-
   passwordHash : String,
   salt: String,
+  student_first_name: {
+    type: String,
+    required: true
+  },
+  student_last_name: {
+    type: String,
+    required: true
+  },
+  specialty: {
+    type: String,
+    required: true,
+  },
+  Year: {
+    type: String,
+    required: true,
+  },
   specialtyOb: {type:String, default: 'Obstetrics'},
   specialtyOp: {type:String, default: 'Surgery'},
   specialtyFM: {type:String, default: 'Family Medicine'},

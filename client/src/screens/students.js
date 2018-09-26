@@ -14,7 +14,7 @@ class Student extends Component {
     }
     
     loadStudents = () => {
-        axios.get('/student/load').then((res) => {
+        axios.get('/users/all').then((res) => {
             //localStorage.setItem('token', res.data.token) 
            // window.location.pathname = '/home'; 
            console.log(res)
@@ -39,7 +39,7 @@ class Student extends Component {
          
         const deleteStudent=(mongoRecordID)=>{
             console.log("MYID",mongoRecordID)
-            axios.delete(`/student/${mongoRecordID}`)
+            axios.delete(`/users/${mongoRecordID}`)
         }
 
         const StudentEditHtml=(props)=>{

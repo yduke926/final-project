@@ -15,7 +15,7 @@ class Schedule extends Component {
     }
 
     loadUsers = () => {
-        axios.get('/api/adminhours/load-users').then((res) => {
+        axios.get('/users/all').then((res) => {
             console.log(res)
             this.setState({
                 userlist: res.data,

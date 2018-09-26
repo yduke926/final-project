@@ -32,4 +32,34 @@ router.post('/login', ((req, res) => {
   }))
 }))
 
+router.get('/all', (req, res) => {
+  User.find({}, function(err, users){
+      if(err){
+          console.log(err);
+          (res.end())
+      } else {
+          //console.log(users);
+          res.json(users);
+      }
+  })
+})
+
+router.delete('/:id',(req,res)=>{
+  console.log("Delete this Id",req.params);
+  if(mongoose.Types.ObjectId.isValid(req.params.id)) {
+      User.findOneAndDelete({_id: req.params.id})
+        .then((docs)=>{
+           if(docs) {
+              res.send({"success":true,data:req.params.id})
+           } else {
+              res.send({"success":false,data:"no such user exist"});
+           }
+      }).catch((err)=>{
+          res.send(err);
+      })
+    } else {
+        res.send({"success":false,data:"please provide correct Id"});
+    }
+  })
+
 module.exports = router;
