@@ -10,7 +10,7 @@ class Register extends Component {
 
     register(e) {
         e.preventDefault()
-        axios.post('/users/signup', this.state).then((res) => {
+        axios.post('/users/register', this.state).then((res) => {
             localStorage.setItem('token', res.data.token) 
             window.location.pathname = '/login';
         })
