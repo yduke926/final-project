@@ -18,6 +18,7 @@ require('./models/studentreport');
 
 let studentreports = require('./routes/studentreports');
 let users = require('./routes/users');
+let student = require('./routes/student');
 const adminhours = require('./routes/api/adminhours');
 const allreports = require('./routes/allreports');
 // app middleware

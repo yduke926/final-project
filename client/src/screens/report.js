@@ -76,11 +76,14 @@ render(){
                                 <a className="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="/hospitalsmap"><i class="fa fa-hospital-o" aria-hidden="true"></i>Hospital Map</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                             </li>
                          </ul>
                     </div>
-                </div>
+                </div>  
             <div className= "jumbotron">
                 {/* <div className="heading">
                         <h1 className="dash">Dashboard</h1>
