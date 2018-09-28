@@ -26,11 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(passport.initialize());
 app.use('/users', users);
-<<<<<<< HEAD
-
-=======
 app.use('/', allreports);
->>>>>>> f45375c556bd3e4fc52dee8bc2459ee075335e89
 app.use('/studentreports', studentreports);
 app.use('/api/adminhours', adminhours);
 
