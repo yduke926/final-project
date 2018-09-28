@@ -7,21 +7,11 @@ let UserSchema = new mongoose.Schema({
   email : String, 
   passwordHash : String,
   salt: String,
-  student_first_name: {
-    type: String,
-    required: true
-  },
-  student_last_name: {
-    type: String,
-    required: true
-  },
   specialty: {
-    type: String,
-    required: true,
+    type: String
   },
   Year: {
-    type: String,
-    required: true,
+    type: String
   },
   specialtyOb: {type:String, default: 'Obstetrics'},
   specialtyOp: {type:String, default: 'Surgery'},

@@ -4,12 +4,14 @@ let router = express.Router();
 let User = require('../models/user');
 
 router.post('/register', ((req, res, next) => {
+  console.log(req.body);
   let newUser = new User();
   newUser.name = req.body.name;
   newUser.email = req.body.email;
   newUser.setPassword(req.body.password);
   newUser.save((err) => {
     if(err) {
+      console.log(err);
       res.send(err);
     } else {
       res.json({token: newUser.generateJWT()})
@@ -21,13 +23,14 @@ router.post('/login', ((req, res) => {
   User.findOne({email: req.body.email}, ((err, user) => {
     if(err) {
       res.sendStatus(500);
-    } else {
+    } else if(user) {
       if(user.validatePassword(req.body.password)) {
         res.json({token: user.generateJWT()})
       } else {
         res.send('Incorrect Password')
       }
-
+    } else {
+      res.sendStatus(404);
     }
   }))
 }))
