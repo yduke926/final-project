@@ -16,6 +16,8 @@ router.post("/", (req, res) => {
 
   let newStudentreport = new Studentreport();
   newStudentreport.date = new Date();
+  // newStudentreport.firstName= req.body.firstName;
+  // newStudentreport.lastName= req.body.lastName;
   newStudentreport.year = req.body.year;
   newStudentreport.report = req.body.reportText;
   newStudentreport.specialty = req.body.specialty;

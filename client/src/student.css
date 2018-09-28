@@ -23,6 +23,11 @@ a{
 a:hover{
     color: white;
 }
+
+.list-group a:hover {
+    color: inherit;
+}
+
 .jumbotron{
     padding: 10px;
     margin-top: 2%;

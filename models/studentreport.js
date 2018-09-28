@@ -3,6 +3,8 @@ let Schema = mongoose.Schema;
 
 let StudentreportSchema = new mongoose.Schema({
     userId: String,
+    // firstName: String,
+    // lastName: String,
     date: Date,
     year: String,
     specialty: String,
