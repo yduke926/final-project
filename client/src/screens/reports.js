@@ -45,7 +45,7 @@ class Reports extends Component {
                                 <a class="nav-link" href="/admin"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
                             </li>
                             <li class="nav-item">
-                                {/* <a class="nav-link active" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a> */}
+                                <a class="nav-link active" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
