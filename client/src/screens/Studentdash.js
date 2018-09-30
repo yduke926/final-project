@@ -58,12 +58,22 @@ class StudentDash extends React.Component {
                             <a className="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                         </li>
                         <li className="nav-item">
+                                <a className="nav-link" href="/hospitalsmap"><i className="fa fa-hospital-o" aria-hidden="true"></i>Clinical Sites</a>
+                            </li>
+                        <li className="nav-item">
                             <a className="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                         </li>
                         </ul>
                 </div>
             </div>
+            <div className="reports-container">
+            <p className="reports-title">Student Reports:</p>
             <ReportList reports={this.state.studentreports} user={this.state.currentUser} />
+            </div>
+            <div className="hours-container">
+            <p className="hours-title">Student Hours:</p>
+            {/* This is where the student hours would be displayed */}
+            </div>
         </div>
     );    
     };             

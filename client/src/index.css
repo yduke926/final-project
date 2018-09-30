@@ -74,6 +74,31 @@ body {
   color: #8e7a6f;
   min-height: 650px;
 }
+@media (max-width: 600px){
+  .signin-container{
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    height: 400px;
+    margin-top: 10%;
+    opacity: 0.75;
+    border: 2px white;
+    border-radius: 20px;
+  }
+  .signin-form{
+    width: 80%;
+    padding-top: 30px;
+    font-size: 1.2em;
+    margin: 0 auto;
+    text-align: left;
+    color: #8e7a6f;
+    min-height: 650px;
+  }
+  .signin-form h1{
+    font-size: 2em;
+  }
+  
+}
 .signin-form h1{
   color: #8e7a6f;
 }
@@ -142,14 +167,18 @@ border-color: #caae9f;
   background-color: white;
   text-decoration: none;
   width: 100%;
-  margin-top: 70%;
+  margin-top: 40%;
   bottom: 0;
   position: sticky;
 
 }
+.footer .copyright-name{
+  color: #8e7a6f;
+  font-size: 1.5em;
+  padding-right: 20px;
+}
 .footer-nav{
   padding-top: 1%;
-  margin-left: 70%;
   }
 footer ul li{
   list-style-type: none;
@@ -160,8 +189,8 @@ footer ul li{
 /* footer icons */
 .fa {
   padding: 10px;
-  font-size: 3em;
-  width: 1.7em;
+  font-size: 2em;
+  width: 2em;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
@@ -213,7 +242,6 @@ footer a:hover{
 
 .my-nav .dropdown-menu{
   background-color: rgb(78, 68, 68);
-  /* background-color: rgb(145, 117, 117); */
   opacity: 1;
 }
 
@@ -245,8 +273,9 @@ footer a:hover{
   text-decoration: none;
 }
 
+
 .report-form-container{
-  width:70%;
+  width:60%;
   margin: auto;
   margin-left: 300px;
   text-align: left;

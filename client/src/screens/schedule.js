@@ -50,7 +50,7 @@ class Schedule extends Component {
                                 <a className="nav-link active" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/hospitalsmap"><i class="fa fa-hospital-o" aria-hidden="true"></i>Hospital Map</a>
+                                <a className="nav-link" href="/hospitalsmap"><i className="fa fa-hospital-o" aria-hidden="true"></i>Clinical Sites</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
@@ -63,9 +63,9 @@ class Schedule extends Component {
                         <h1 className="dash">Dashboard</h1>
                         <h6 className="welcome">Welcome to the Student Dashboard</h6>
                     </div> */}
-                <h3>Please use the following form for submission of completed student hours:</h3><br></br><br></br>
+                <h3 className="please-use-hours">Please use the following form for submission of completed student hours:</h3><br></br><br></br>
                 <form>
-                    <div className="report-form-container">
+                    <div className="report-form-container student-hours">
                     <label for="StudentInputForm">Select your name:</label>
                     <select className="form-control" id="exampleFormControlSelect0" name="userId" onChange={(e) => this.setValue(e)}>
                    {(this.state.userlist) ? this.state.userlist.map((user,index) => (
@@ -92,7 +92,7 @@ class Schedule extends Component {
                         </div>
                         <div className="form-group">
                             <label for="exampleFormControlInput1">Hours Completed:</label>
-                            <input type="number" onChange={(e) => this.setValue(e)} name = "hours" class="form-control" id="exampleFormControlInput1" placeholder="" required />
+                            <input type="number" onChange={(e) => this.setValue(e)} name = "hours" className="form-control" id="exampleFormControlInput1" placeholder="" required />
                         </div>
                     </div>
                 </form>
