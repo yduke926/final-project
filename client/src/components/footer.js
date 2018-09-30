@@ -11,6 +11,7 @@ class Footer extends Component {
          <footer>
          <nav>
             <ul>
+                <li className="copyright-name">© 2018 MediTrack. All Rights Reserved.</li>
                 <li><a href="http://www.facebook.com" target ="_blank" rel="noopener noreferrer" className="fa fa-facebook"></a></li>
                 <li><a href="http://www.twitter.com" target ="_blank" rel="noopener noreferrer" className="fa fa-twitter"></a></li>
                 <li><a href="http://www.github.com" target ="_blank" rel="noopener noreferrer" className="fa fa-github"></a></li>

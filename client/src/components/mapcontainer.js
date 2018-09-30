@@ -35,41 +35,41 @@ class MapContainer extends Component {
        >
        
        <Marker onClick={this.onMarkerClick}
-               icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              //  icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
                name={'Elson S. Floyd College of Medicine'} />
        <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={'Columbia Medical Associates'}
               position={{lat: 47.662870, lng: -117.394200}} />
        <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Shriners Hospital for Children"}
               position={{lat: 47.650950, lng: -117.425800}} />
         <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Multicare Rockwood Main Clinic"}
               position={{lat: 47.650840, lng: -117.405240}} />
          <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Cancer Care Northwest"}
               position={{lat: 47.668450, lng: -117.232910}} />
          <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Kaiser Permanente"}
               position={{lat: 47.668450, lng: -117.232910}} />     
          <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"CHAS Health"}
               position={{lat: 47.657880, lng: -117.429580}} />     
          <Marker
               onClick={this.onMarkerClick}
-              icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
+              // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Providence Holy Family Hospital"}
               position={{lat: 47.709900, lng: -117.406820}} />   
 

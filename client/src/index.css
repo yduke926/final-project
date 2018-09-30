@@ -142,14 +142,18 @@ border-color: #caae9f;
   background-color: white;
   text-decoration: none;
   width: 100%;
-  margin-top: 70%;
+  margin-top: 40%;
   bottom: 0;
   position: sticky;
 
 }
+.footer .copyright-name{
+  color: #8e7a6f;
+  font-size: 1.5em;
+  padding-right: 20px;
+}
 .footer-nav{
   padding-top: 1%;
-  margin-left: 70%;
   }
 footer ul li{
   list-style-type: none;
@@ -160,8 +164,8 @@ footer ul li{
 /* footer icons */
 .fa {
   padding: 10px;
-  font-size: 3em;
-  width: 1.7em;
+  font-size: 2em;
+  width: 2em;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
