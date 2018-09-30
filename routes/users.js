@@ -4,7 +4,6 @@ let router = express.Router();
 let User = require('../models/user');
 
 router.post('/register', ((req, res, next) => {
-  console.log(req.body);
   let newUser = new User();
   newUser.name = req.body.name;
   newUser.email = req.body.email;
@@ -46,6 +45,20 @@ router.get('/all', (req, res) => {
       }
   })
 })
+
+router.get('/:id', (req, res) => {
+  User.find({_id:req.params.id}, function(err, users){
+      if(err){
+          console.log(err);
+          (res.end())
+      } else {
+          //console.log(users);
+          res.json(users);
+      }
+  })
+})
+
+
 
 router.delete('/:id',(req,res)=>{
   console.log("Delete this Id",req.params);

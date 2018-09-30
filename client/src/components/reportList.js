@@ -7,6 +7,13 @@ class ReportList extends Component {
         reports: []
     }
 
+    specialtyProps = {
+        Obstetrics: 'specialtyObhours',
+        Surgery: 'specialtyOphours',
+        FamilyMedicine: 'specialtyFmhours',
+        Pediatrics: 'specialtyPedhours'
+    }
+
     delete(sr) {
         axios.delete(`/studentreports/${sr._id}`).then(() => {
             window.location.reload();
@@ -26,10 +33,15 @@ class ReportList extends Component {
         });
     }
 
-    console.log(reports);
-
     return (
         <div>
+            <div>
+                {this.props.user ? Object.keys(this.specialtyProps).map((spec) => (
+                    <p key={spec}>{spec} Hours: 
+                        {this.props.user[this.specialtyProps[spec]].current}/
+                        {this.props.user[this.specialtyProps[spec]]. target} (Target)</p>
+                )) : ""}
+            </div>
         <div className="accordion" id="accordionExample">
         {(reports) ? Object.keys(reports).map((spec) => (
            

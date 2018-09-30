@@ -24,7 +24,7 @@ class Schedule extends Component {
     }
 
     save() {
-        axios.post('/api/adminhours', this.state).then(() => {
+        axios.post('/api/adminhours', {...this.state, userlist: undefined}).then(() => {
             window.location.reload()
         })
     }
@@ -84,10 +84,10 @@ class Schedule extends Component {
                         <div className="form-group">
                             <label for="exampleFormControlSelect2">Specialty:</label>
                             <select className="form-control" id="exampleFormControlSelect2" name= "specialty" required onChange={(e) => this.setValue(e)} >
-                            <option>Obstetrics</option>
-                            <option>Pediatrics</option>
-                            <option>Surgery</option>
-                            <option>Family Medicine</option>
+                                <option value="Ob">Obstetrics</option>
+                                <option value="Ped">Pediatrics</option>
+                                <option value="Op">Surgery</option>
+                                <option value="Fm">Family Medicine</option>
                             </select>
                         </div>
                         <div className="form-group">

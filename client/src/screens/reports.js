@@ -5,6 +5,7 @@ import ReportList from '../components/reportList'
 class Reports extends Component {
     // constructor(props) {super(props)
     state={
+        currentSelectedUser: null,
         userlist:[],
         studentreports: []
     }
@@ -14,7 +15,7 @@ class Reports extends Component {
     }
 
     loadUsers = () => {
-        axios.get('/api/adminhours/load-users').then((res) => {
+        axios.get('/users/all').then((res) => {
             console.log(res)
             this.setState({
                 userlist: res.data,
@@ -23,9 +24,14 @@ class Reports extends Component {
     }
 
     loadReports = e => {
-        axios.get(`/studentreports/${e.target.value}`).then(res => {
+        let userId = e.target.value;
+
+        axios.get(`/studentreports/${userId}`).then(res => {
             console.log(res);
-           this.setState({studentreports:res.data});
+           this.setState({
+                currentSelectedUser: this.state.userlist.find(u => u._id == userId),
+                studentreports: res.data
+            });
         });
     }
    
@@ -63,12 +69,11 @@ class Reports extends Component {
                     {(this.state.userlist) ? this.state.userlist.map((user,index) => (
                         <option key={user._id} value={user._id}>{user.name}</option>
                            )):""}
-                           )):""}
                             </select>
                             </div>
                     
          </form> 
-                <ReportList reports={this.state.studentreports} />
+                <ReportList reports={this.state.studentreports} user={this.state.currentSelectedUser} />
          </div> 
         );
     };

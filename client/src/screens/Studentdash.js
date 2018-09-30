@@ -18,37 +18,23 @@ import ReportList from '../components/reportList'
 // }
 
 class StudentDash extends React.Component {
-    constructor(props) {super(props)
-        this.state={}
-        
-    // this.loadStudentReports()
-}
+    state = {}
 
-// handleSubmit(event) {
-//   event.preventDefault();
-//   this.report.deleteData(this.rep._id);
-// }
-// loadStudentReports =() => {
-// axios.get('/student/load').then((res) => {
-//     console.log(res)
-//     this.setState({
-//         studentreports:res.data
-//     })
-// })
-// }
-setValue(e) {   
-    this.setState({[e.target.name]: e.target.value})
-}
     componentDidMount() {
-                let authToken = window.localStorage.token;
-                console.log(authToken);                
-                let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
-                axios.get(`/studentreports/${payload.id}`).then((res) => {
-                    this.setState({
-                        userID: payload.id,
-                        studentreports:res.data
-                    })
-            })
+        let authToken = window.localStorage.token;              
+        let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
+
+        axios.get(`/studentreports/${payload.id}`).then((res) => {
+            this.setState({
+                studentreports: res.data
+            });
+        });
+
+        axios.get(`/users/${payload.id}`).then((res) => {
+            if(res.data.length) {
+                this.setState({currentUser: res.data[0]});
+            }
+        });
     }
 
     render (){
@@ -77,8 +63,7 @@ setValue(e) {
                         </ul>
                 </div>
             </div>
-            
-            <ReportList reports={this.state.studentreports} />
+            <ReportList reports={this.state.studentreports} user={this.state.currentUser} />
         </div>
     );    
     };             
