@@ -63,9 +63,9 @@ class Schedule extends Component {
                         <h1 className="dash">Dashboard</h1>
                         <h6 className="welcome">Welcome to the Student Dashboard</h6>
                     </div> */}
-                <h3>Please use the following form for submission of completed student hours:</h3><br></br><br></br>
+                <h3 className="please-use-hours">Please use the following form for submission of completed student hours:</h3><br></br><br></br>
                 <form>
-                    <div className="report-form-container">
+                    <div className="report-form-container student-hours">
                     <label for="StudentInputForm">Select your name:</label>
                     <select className="form-control" id="exampleFormControlSelect0" name="userId" onChange={(e) => this.setValue(e)}>
                    {(this.state.userlist) ? this.state.userlist.map((user,index) => (

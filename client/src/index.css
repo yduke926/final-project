@@ -74,6 +74,31 @@ body {
   color: #8e7a6f;
   min-height: 650px;
 }
+@media (max-width: 600px){
+  .signin-container{
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    height: 400px;
+    margin-top: 10%;
+    opacity: 0.75;
+    border: 2px white;
+    border-radius: 20px;
+  }
+  .signin-form{
+    width: 80%;
+    padding-top: 30px;
+    font-size: 1.2em;
+    margin: 0 auto;
+    text-align: left;
+    color: #8e7a6f;
+    min-height: 650px;
+  }
+  .signin-form h1{
+    font-size: 2em;
+  }
+  
+}
 .signin-form h1{
   color: #8e7a6f;
 }
@@ -217,7 +242,6 @@ footer a:hover{
 
 .my-nav .dropdown-menu{
   background-color: rgb(78, 68, 68);
-  /* background-color: rgb(145, 117, 117); */
   opacity: 1;
 }
 
@@ -249,8 +273,9 @@ footer a:hover{
   text-decoration: none;
 }
 
+
 .report-form-container{
-  width:70%;
+  width:60%;
   margin: auto;
   margin-left: 300px;
   text-align: left;
