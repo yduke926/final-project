@@ -21,7 +21,6 @@ class Login extends React.Component {
 
   render() {
     return (
-        <div className="bg-image-container">
         <div className="signin-container">
         <div className="signin-form">
 
@@ -42,7 +41,6 @@ class Login extends React.Component {
                 <h6><a href="Register">Register</a></h6>
             </div>
          </div>
-    </div>
     );
    }
   }
