@@ -15,7 +15,7 @@ class Schedules extends Component {
     }
 
     loadUsers = () => {
-        axios.get('/api/adminhours/load-users').then((res) => {
+        axios.get('/users/all').then((res) => {
             console.log(res)
             this.setState({
                 userlist: res.data,
@@ -24,8 +24,9 @@ class Schedules extends Component {
     }
 
     save() {
-        axios.post('/api/adminhours', this.state).then(() => {
-            alert("Hours added!")
+
+        axios.post('/api/adminhours', {...this.state, userlist: undefined}).then(() => {
+              alert("Hours added!")
             window.location.reload()
         })
     }

@@ -36,15 +36,18 @@ class ReportList extends Component {
     return (
         <div>
             <div>
+                <h3 className="hours-title"> Student Hours:</h3><hr></hr>
                 {this.props.user ? Object.keys(this.specialtyProps).map((spec) => (
-                    <p key={spec}>{spec} Hours: 
-                        {this.props.user[this.specialtyProps[spec]].current}/
-                        {this.props.user[this.specialtyProps[spec]]. target} (Target)</p>
+                    <ul className="list-group student-hours-list"> 
+                        <li className="list-group-item hours-display" key={spec}>{spec} Hours:
+                       {this.props.user[this.specialtyProps[spec]].current}/
+                        {this.props.user[this.specialtyProps[spec]]. target} (Target)</li></ul>
                 )) : ""}
             </div>
+       <div>
+       <h3 className="hours-title">Student Reports:</h3><hr></hr>
         <div className="accordion" id="accordionExample">
         {(reports) ? Object.keys(reports).map((spec) => (
-           
             <div className="card reports" key={spec}>
                 <div className="card-header reports" id={"heading" + spec}>
                     <h5 className="mb-0">
@@ -71,10 +74,11 @@ class ReportList extends Component {
                         </div>
                     </div>
                 </div>   
-            </div>
+            </div>  
         )):""}
         </div>
     </div>
+   </div> 
     );
   };
 }
