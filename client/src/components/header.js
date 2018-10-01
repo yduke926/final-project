@@ -33,7 +33,7 @@ class Header extends Component {
         <a className="nav-link" href="Login">Log In</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="">Log Out</a>
+        <a className="nav-link" href="/logout">Log Out</a>
       </li>
     </ul>
   </div> 
