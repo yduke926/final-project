@@ -25,6 +25,7 @@ class Schedule extends Component {
 
     save() {
         axios.post('/api/adminhours', this.state).then(() => {
+            alert("Hours added!")
             window.location.reload()
         })
     }
