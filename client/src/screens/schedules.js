@@ -42,9 +42,9 @@ class Schedules extends Component {
                 <div className="my-vertical-nav">
                 <div className="row vertical-test">
                         <ul className="nav flex-column">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link" href="/admin"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <a className="nav-link" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
                             </li>
