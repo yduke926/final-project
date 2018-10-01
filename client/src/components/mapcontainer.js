@@ -61,7 +61,7 @@ class MapContainer extends Component {
               onClick={this.onMarkerClick}
               // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Kaiser Permanente"}
-              position={{lat: 47.668450, lng: -117.232910}} />     
+              position={{lat: 47.665320, lng: -117.414510}} />     
          <Marker
               onClick={this.onMarkerClick}
               // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
@@ -72,6 +72,8 @@ class MapContainer extends Component {
               // icon={{url: "https://s3.amazonaws.com/meditrack/cardiogram.png"}} 
               name={"Providence Holy Family Hospital"}
               position={{lat: 47.709900, lng: -117.406820}} />   
+
+              
 
 
 
