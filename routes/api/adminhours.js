@@ -17,17 +17,5 @@ router.post('/', (req, res) => {
     res.end();
 });
 
-router.get('/load-users', (req, res) => {
-    User.find({}, function(err, users){
-        if(err){
-            console.log(err);
-            (res.end())
-        } else {
-            //console.log(users);
-            res.json(users);
-        }
-    })
-})
-
 
 module.exports = router;
