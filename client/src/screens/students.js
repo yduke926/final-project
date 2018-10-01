@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { ListGroup, ListGroupItem, Image } from 'react-bootstrap';
+import AdminNav from '../components/adminnav';
+
 class Student extends Component {
     constructor(props) {
         super(props)
@@ -44,33 +46,14 @@ class Student extends Component {
 
         const StudentEditHtml=(props)=>{
             return (
-              <div> 
-                 <div className="welcome-student-dash">
-                    <div className="welcome-info">
-                        <p className="welcome-text">Welcome to the Admin Dashboard</p>
-                    </div>
-                </div>
-                <div className="my-vertical-nav students-page-nav">
-                <div className="row vertical-test">
-                        <ul className="nav flex-column">
-                            <li className="nav-item">
-                                <a className="nav-link active" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/students"><i className="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>Students</a>
-                            </li>
-                         </ul>
-                    </div>
-                   </div> 
+              <div>  
+              <AdminNav />
                 <br></br><br></br>
                 <div className="card student-profile-card">
                 <h3 className="card-title">{props.student.name}</h3>
                 <h6>Email: {props.student.email}</h6>
-                {/* <h6>Year:{props.student.year}</h6>
-                <h8>Speciality:{props.student.speciality} Hours Required:{props.student.hoursrequired} Completed:{props.student.hourscompleted}</h8><br></br> */}
+                <h6>Year:{props.student.year}</h6>
+                <h8>Speciality:{props.student.speciality} Hours Required:{props.student.hoursrequired} Completed:{props.student.hourscompleted}</h8><br></br>
                 <button type="button" className="btn btn-secondary students-delete" onClick={() => deleteStudent(props.student._id)}>
                     Delete Student Profile
                 </button>
@@ -85,33 +68,13 @@ class Student extends Component {
      
       const ListStudentsHtml = (props) => {
         return (
-            <div>
-                    <div className="welcome-student-dash">
-                        <div className="welcome-info">
-                            <p className="welcome-text">Welcome to the Admin Dashboard</p>
-                        </div>
-                        <div className="my-vertical-nav">
-                <div className="row vertical-test">
-                        <ul className="nav flex-column">
-                            <li className="nav-item">
-                                <a className="nav-link" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/schedules"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" href="/students"><i className="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>Students</a>
-                            </li>
-                         </ul>
-                    </div>
-                  </div>
-                </div>
+           <div> 
+           <AdminNav />
             <br></br>
                 <ListGroup className="student-card">
                     {(props.listofstudents) ? props.listofstudents.map((student,index) => (
 
                     <ListGroupItem onClick={(event)=>props.toggleClick(event,{student})} header={student.name} key={index}>
-                
                 
                     <Image className="student-head" src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015" rounded /><br />
                     {/* Email:{student.email}<br />

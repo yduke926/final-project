@@ -191,10 +191,10 @@ a:hover{
 /* Kristy's student's page */
 
 .student-card{
-    width: 60%;
+    width: 70%;
     height: 50%;
     float:center;
-    padding-left: 13%;
+    padding-left: 20%;
 }
 
 .student-head{
