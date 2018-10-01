@@ -18,6 +18,7 @@ router.post('/register', ((req, res, next) => {
   })
 }));
 
+
 router.post('/login', ((req, res) => {
   User.findOne({email: req.body.email}, ((err, user) => {
     if(err) {

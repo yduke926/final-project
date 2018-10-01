@@ -43,6 +43,7 @@ class HospitalsMap extends Component {
                         <li className="list-group-item">Columbia Medical Associates<br></br>1003 E. Trent, Suite 150 Spokane, WA 99202</li>
                         <li className="list-group-item">CHAS Health 203 N. Washington, Suite 300 Spokane, WA 99201</li>
                         <li className="list-group-item">Providence Holy Family Hospital<br></br>5633 N. Lidgerwood Street Spokane, WA 99208 </li>
+                        <li className="list-group-item">Kaiser Permanente Riverfront Medical Center, 322 W North River Dr, Spokane, WA 99201</li>
                    </ul>
            </div> 
         )
