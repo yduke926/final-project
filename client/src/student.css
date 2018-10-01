@@ -182,9 +182,44 @@ a:hover{
       text-decoration: none;
   }
   .btn-link:hover{
-      color: rgb(128, 123, 123);
+      color: #981D31;
       text-decoration: none;
   }
   .reports{
     background-color: white;
+}
+/* Kristy's student's page */
+
+.student-card{
+    width: 60%;
+    height: 50%;
+    float:center;
+    padding-left: 13%;
+}
+
+.student-head{
+    max-width: 100px;;
+}
+.student-head:hover {
+    opacity: .5;
+}
+.students-delete{
+    margin: 5px;
+    width: 100%;
+}
+.student-profile-card{
+    margin: 500px;
+}
+
+.hours-display{
+    font-size: 2em;
+}
+.student-hours-list{
+    margin-top:0px;
+    width:65%;
+    margin-left: 25%;
+}
+
+.student-profile-card{
+    margin-top: 10%;
 }

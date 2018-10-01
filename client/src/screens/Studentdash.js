@@ -65,15 +65,8 @@ class StudentDash extends React.Component {
                         </li>
                         </ul>
                 </div>
-            </div>
-            <div className="reports-container">
-            <p className="reports-title">Student Reports:</p>
+            </div>           
             <ReportList reports={this.state.studentreports} user={this.state.currentUser} />
-            </div>
-            <div className="hours-container">
-            <p className="hours-title">Student Hours:</p>
-            {/* This is where the student hours would be displayed */}
-            </div>
         </div>
     );    
     };             

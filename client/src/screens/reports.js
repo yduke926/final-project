@@ -47,9 +47,6 @@ class Reports extends Component {
                 <div className="my-vertical-nav">
                 <div className="row vertical-test">
                         <ul className="nav flex-column">
-                            {/* <li className="nav-item">
-                                <a className="nav-link" href="/admin"><i className="fa fa-home" aria-hidden ="true"></i>Home</a>
-                            </li> */}
                             <li className="nav-item">
                                 <a className="nav-link active" href="/reports"><i className="fa fa-sticky-note-o" aria-hidden="true"></i>Reports</a>
                             </li>
@@ -64,7 +61,7 @@ class Reports extends Component {
                 </div>
                 <form>
                     <div className="report-form-container">
-                    <label for="StudentInputForm" className="student-select">Select student name to view reports:</label>
+                    <label for="StudentInputForm" className="student-select">Select student name to view hours and reports:</label>
                     <select className="form-control" id="exampleFormControlSelect0" name="userId" onChange={(e) => this.loadReports(e)}>
                     {(this.state.userlist) ? this.state.userlist.map((user,index) => (
                         <option key={user._id} value={user._id}>{user.name}</option>
