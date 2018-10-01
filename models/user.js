@@ -7,6 +7,12 @@ let UserSchema = new mongoose.Schema({
   email : String, 
   passwordHash : String,
   salt: String,
+  specialty: {
+    type: String
+  },
+  Year: {
+    type: String
+  },
   specialtyOb: {type:String, default: 'Obstetrics'},
   specialtyOp: {type:String, default: 'Surgery'},
   specialtyFM: {type:String, default: 'Family Medicine'},

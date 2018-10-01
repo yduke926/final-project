@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Toggle from '../components/Toggle';
 
+
 class Help extends Component {
 
     
@@ -24,6 +25,9 @@ class Help extends Component {
                         <li className="nav-item">
                           <a className="nav-link" href="/schedule"><i className="fa fa-calendar-check-o" aria-hidden="true"></i>Schedule</a>
                         </li>
+                        <li className="nav-item">
+                                <a className="nav-link" href="/hospitalsmap"><i className="fa fa-hospital-o" aria-hidden="true"></i>Clinical Sites</a>
+                            </li>
                         <li className="nav-item">
                           <a className="nav-link active" href="/help"><i className="fa fa-question-circle" aria-hidden="true"></i>Help</a>
                         </li>

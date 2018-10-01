@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../components/footer';
 
 
 
@@ -12,6 +13,7 @@ class Home extends Component {
         <a className="btn home-button btn-outline-secondary" href="Login" role="button">Login</a><a className="btn home-button-2 btn-outline-secondary" href="Register" role="button">Register</a>
        </div>
      </div>
+     <Footer />
     </div>
     );
    }
