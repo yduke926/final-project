@@ -17,8 +17,6 @@ class Student extends Component {
     
     loadStudents = () => {
         axios.get('/users/all').then((res) => {
-            //localStorage.setItem('token', res.data.token) 
-           // window.location.pathname = '/home'; 
            console.log(res)
            this.setState({
                studentlist:res.data
@@ -42,8 +40,12 @@ class Student extends Component {
         const deleteStudent=(mongoRecordID)=>{
             console.log("MYID",mongoRecordID)
             axios.delete(`/users/${mongoRecordID}`)
+            .then (() => {
+                window.location = '/students';
+            })
         }
 
+    
         const StudentEditHtml=(props)=>{
             return (
               <div>  
@@ -52,8 +54,7 @@ class Student extends Component {
                 <div className="card student-profile-card">
                 <h3 className="card-title">{props.student.name}</h3>
                 <h6>Email: {props.student.email}</h6>
-                <h6>Year:{props.student.year}</h6>
-                <h8>Speciality:{props.student.speciality} Hours Required:{props.student.hoursrequired} Completed:{props.student.hourscompleted}</h8><br></br>
+                <br></br>
                 <button type="button" className="btn btn-secondary students-delete" onClick={() => deleteStudent(props.student._id)}>
                     Delete Student Profile
                 </button>
@@ -77,17 +78,7 @@ class Student extends Component {
                     <ListGroupItem onClick={(event)=>props.toggleClick(event,{student})} header={student.name} key={index}>
                 
                     <Image className="student-head" src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015" rounded /><br />
-                    {/* Email:{student.email}<br />
-                    Year:{student.year}<br />
-                    Speciality:{student.speciality}<br />
-                    Hoursrequired:{student.hoursrequired}<br />
-                    Hourscompleted:{student.hourscompleted}<br /> */}
                     
-                    {/* <button onClick={this.deleteStudent(index)}> */}
-                    {/* <button>
-                    
-                    Delete  
-                    </button> */}
                     </ListGroupItem>
 
                     )): null}
