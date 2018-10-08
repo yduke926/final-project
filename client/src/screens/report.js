@@ -11,22 +11,6 @@ class Report extends React.Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
-//     componentDidMount() {
-//         let authToken = window.localStorage.token;
-//         let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
-//         axios.get(`/studentreports/${payload.id}`).then((res) => {
-//             this.setState({
-//                 owner: payload.id,
-//                 studentreports: res.data
-//             })
-//         })
-//     }
-
-// save() {
-//     axios.post('/studentreports', this.state).then(() => {
-//         window.location.reload()
-//     })
-// }
 save() {
     let authToken = window.localStorage.token;
 
@@ -38,22 +22,6 @@ save() {
         })
 }
 
-//  edit(sr) {
-//      let newStudentreport = window.prompt(`Update Studentreport: ${sr.description}`);
-//      this.setState({newStudentreport: newStudentreport}, () =>
-//      {
-//          axios.put(`/studentreports/${sr._id}`,
-//         this.state).then(() => {
-//             window.location.reload();
-//         })
-//      })
-//  }
-
-//  delete(sr) {
-//      axios.delete(`/studentreports/${sr._id}`).then(() => {
-//     window.location.reload()
-//     })
-//  }
 
 render(){
         return (
@@ -85,12 +53,6 @@ render(){
                     </div>
                 </div>  
             <div className= "jumbotron">
-                {/* <div className="heading">
-                        <h1 className="dash">Dashboard</h1>
-                        <h6 className="welcome">Welcome to the Student Dashboard</h6>
-                    </div> */}
-            
-                {/* reporting form */}
                 
                 <h3>Please use the following form for submission of student reports:</h3><br></br><br></br>
                 <form>
